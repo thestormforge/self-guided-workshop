@@ -1,6 +1,7 @@
 Welcome to StormForge's Self-Guided-Workshops
 ---
-*Introduction*
+**Introduction**
+
 [StormForge](https://www.stormforge.io) Hands-On-Workshops are a great way to get direct experience with our application optimization tools.
 
 The StormForge Optimize platform uses machine learning to discover optimal application configurations via two methods:
