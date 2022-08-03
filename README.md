@@ -14,6 +14,6 @@ The StormForge Optimize platform uses machine learning to discover optimal appli
 * Performance Engineers
 * Application Developers
 
-**What to expect**
+**What to Expect**
 
 Each workshop consists of a sequence of modules designed to walk the audience through the deployment and optimization of various applications using either *Optimize Pro* or *Optimize Live* with an entire workshop intended to be completed in ~4-hours (half-day).
