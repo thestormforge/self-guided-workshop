@@ -1,13 +1,13 @@
-StormForge Hands On Workshop
+# StormForge Hands On Workshop
 ---
 **ML-Based App Tuning for Java** *with Optimize Pro*
 
 ---
 
-**Prerequisites**:
+### Prerequisites:
 * [Minimum Kubernetes Cluster Requirements](https://docs.stormforge.io/optimize-pro/getting-started/quickstart/#prerequisites)
 
-**Agenda:**
+### Agenda:
 * [Module 0 - An Introduction to StormForge Optimize Pro](README.md) *(optional)*
 * [Module 1 - Provision Access to StormForge Optimize](README.md) *(x min)*
 * [Module 2 - Deploy a Sample Java Application](README.md) *(x min)*
