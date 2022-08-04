@@ -22,4 +22,4 @@ Each workshop consists of a sequence of modules designed to walk the audience th
 
 **List of Available Workshops**
 
-* [Java Application Tuning](https://github.com/thestormforge/self-guided-workshop/tree/main/Java) *with Optimize Pro*
+* [ML-Based App Tuning for Java](https://github.com/thestormforge/self-guided-workshop/tree/main/Java) *with Optimize Pro*
