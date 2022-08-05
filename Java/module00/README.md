@@ -32,20 +32,19 @@ Experiment results are plotted on a chart where each axis represents a `metric` 
 
 In the example below, an Experiment was run to optimize a Java-based application to minimize the **duration** (Y-Axis) of a performance test while also minimizing the **cost** (X-Axis) of the application under load.
 
-![Experiment Results](../Assets/Images/experiment-results.png)
-<sub>Figure 3. Results show the `metrics` associated with each `Trial` that was executed as part of the `Experiment` process.</sub>
+>image placeholder
 
 StormForge machine learning rapidly iterates parameter configurations, measures their results, and plots each result on the graph.
 
 The baseline configuration is marked in **<span style="color:blue">blue</span>**:
-![Baseline Parameter Values](/Java/Assets/Images/parameters-base.png)
-<sub>Figure 4. These baseline parameter values represent the pre-optimized state of the application.</sub>
+>image placeholder
 
 Optimal configurations are marked in **<span style="color:orange">orange</span>**:
-![Optimal Configurations](../Assets/Images/experiment-optimal.png)
-<sub>Figure 5. Optimal configurations represent parameter values set by the machine learning that best meet the one or both objectives or `metrics`.</sub>
+>image placeholder
 
 *this is incomplete*
+
+
 
 
 
