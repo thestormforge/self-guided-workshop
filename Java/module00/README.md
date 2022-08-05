@@ -1,5 +1,5 @@
 # An Introduction to StormForge Optimize Pro
----
+
 ### What problem does StormForge Optimize Pro solve?
 Managing application parameters for Kubernetes deployments is difficult at best and near impossible at scale.
 
@@ -8,7 +8,6 @@ Beyond setting basic Kubernetes native deployment parameters like `requests` and
 ![Kubernetes Parameters Can Be Complicated!](/Java/Assets/Images/k8s-param-gauges.png)
 <sub>Figure 1: Application parameters can include resource `requests` and `limits` as well as other variables like `HEAP_SIZE`, `PARALLEL_GC_THREADS`, and many more. </sub>
 
---- 
 The default behavior is to overprovision resources, ship features quickly, and worry about efficiency *(read: cost overruns)* later.
 
 As organizations mature, it's common to create initiatives that result in the need for applications to be "tuned" to improve costs, performance, or both - manual application tuning exercises can involve too many people and take too much time.
@@ -26,9 +25,28 @@ Experiments are objects written in YAML and when submitted via `kubectl`, autono
 ![Experiment Lifecycle](/Java/Assets/Images/experiment-timeline.png)
 <sub>Figure 2. StormForge Optimize Pro's Experiment Cycle</sub>
 
-Once the Experiment is completed, the results can be viewed via the [StormForge Optimize User Interface](https://app.stormforge.io) or via the `stormforge` CLI.
+Once the Experiment is completed, the results can be viewed via the [StormForge Optimize Web User Interface](https://app.stormforge.io) or via the `stormforge` CLI.
 
-#### 
+#### Experiment Results
+Experiment results are plotted on a chart where each axis represents a `metric` used to inform the machine learning in what ways to optimize an `application`.
+
+In the example below, an Experiment was run to optimize a Java-based application to minimize the **duration** (Y-Axis) of a performance test while also minimizing the **cost** (X-Axis) of the application under load.
+
+![Experiment Results](../Assets/Images/experiment-results.png)
+<sub>Figure 3. Results show the `metrics` associated with each `Trial` that was executed as part of the `Experiment` process.</sub>
+
+StormForge machine learning rapidly iterates parameter configurations, measures their results, and plots each result on the graph.
+
+The baseline configuration is marked in **<span style="color:blue">blue</span>**:
+![Baseline Parameter Values](/Java/Assets/Images/parameters-base.png)
+<sub>Figure 4. These baseline parameter values represent the pre-optimized state of the application.</sub>
+
+Optimal configurations are marked in **<span style="color:orange">orange</span>**:
+![Optimal Configurations](../Assets/Images/experiment-optimal.png)
+<sub>Figure 5. Optimal configurations represent parameter values set by the machine learning that best meet the one or both objectives or `metrics`.</sub>
+
+*this is incomplete*
+
 
 
 
