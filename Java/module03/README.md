@@ -146,7 +146,7 @@ Opening your default browser to visit:
 
 	https://auth.stormforge.io/authorize?audience=https%3A%2F%2Fapi.stormforge.io%2F&client_id=pE3kMKdrMTdW4DOxQHesyAuFGNOWaEke&code_challenge=_U-E-BKpaHKKFHKIr1Dx3pgzsh1X8ORPplFuqw3jUzE&code_challenge_method=S256&redirect_uri=http%3A%2F%2F127.0.0.1%3A8085%2F&response_type=code&scope=offline_access+manage%3Aclients&state=nPX8X25As6fZn2OUzIE12w
 
-`You are now logged in.`
+    You are now logged in.
 
 **Note:** The default login action is to open a browser window automatically and attempt an automated, browser-based authentication flow with api.stormforge.io. If this fails you may need to manually login via `stormforge login --force --qr` or `stormforge login --force --url` and follow the instructions provided along with the supplied verification code.
 
