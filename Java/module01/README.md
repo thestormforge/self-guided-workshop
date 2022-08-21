@@ -27,13 +27,14 @@ Once your prerequisite CLI tools have been installed on your machine, the first 
 
 ### Confirm your account via email
 After you've signed up, you'll receive an email message to confirm your account.
-![confirmation email](/self-guided-workshop/Java/Assets/Images/confirmation-email.png)
+
+![confirmation email](/Java/Assets/Images/confirmation-email.png)
 
 Click "Confirm my account"
 
 Your default web browser will open and you should see an "Email Verified" message to complete your account confirmation.
 
-![confirmation web](/self-guided-workshop/Java/Assets/Images/confirmation-web.png)
+![confirmation web](/Java/Assets/Images/confirmation-web.png)
 
 
 
