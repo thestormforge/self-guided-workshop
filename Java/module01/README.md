@@ -16,8 +16,9 @@ Once your prerequisite CLI tools have been installed on your machine, the first 
 `git clone https://github.com/thestormforge/self-guided-workshop.git`
 
 ### Sign up for a StormForge Optimize Trial Account
-1. visit [https://app.stormforge.io](https://app.stormforge.io)
-![signup with labels](/Java/Assets/signup-labeleled.png)
+1. visit [https://app.stormforge.io](https://app.stormforge.io)<br>
+![signup-with-labels](/self-guided-workshop/Java/Assets/Images/signup-labeled.png)
+
 <sub>
 1. Click "Sign Up"
 2. Enter your corporate email and choose a password
