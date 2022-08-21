@@ -13,12 +13,9 @@ The instance of Pet Clinic built for this workshop is using Java 8 (OpenJDK 1.8.
 
 ## Lab
 ### Details 
-Namespace: `examples`
-
-Deployment: `pet-clinic`
-
-Service: `pet-clinic`
-
+Namespace: `examples`<br>
+Deployment: `pet-clinic`<br>
+Service: `pet-clinic`<br>
 Ingress: `pet-clinic`
 
 ### Hands-on
