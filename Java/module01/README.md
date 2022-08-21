@@ -17,7 +17,7 @@ Once your prerequisite CLI tools have been installed on your machine, the first 
 
 ### Sign up for a StormForge Optimize Trial Account
 1. visit [https://app.stormforge.io](https://app.stormforge.io)<br>
-![signup-with-labels](/self-guided-workshop/Java/Assets/Images/signup-labeled.png)
+![signup-with-labels](/Java/Assets/Images/signup-labeled.png)
 
 <sub>
 1. Click "Sign Up"
