@@ -4,7 +4,7 @@
 
 As previously mentioned, the Pet Clinic startup time experiment used in module 3 was chosen to fit the timeframe of this single day workshop. Now that that experiment has been successfully created and running, let’s shift gears a bit and examine the results of a couple of previously run, performance-based experiments for Pet Clinic.
 
-These two experiments were driven by a StormForge Performance Testing test case trial job that ran for 1 minute and 30 seconds each invocation and used an imported HAR file (generated using the instructions from module 2). The total experiment run time for 100 trials each came in around 6 hrs per experiment.
+These two experiments were driven by a *StormForge Performance Testing* test case trial job that ran for 1 minute and 30 seconds each invocation and used an imported HAR file (generated using the instructions from module 2). The total experiment run time for 100 trials each came in around 6 hrs per experiment.
 
 It is important to keep in mind that when crafting an experiment, as with any type of scientific experiment, there is usually a question in mind for which you currently do not yet have enough data to answer. The goal of the experiment is then to gather enough data as accurately and quickly as possible to develop your answer. As we’ll see after examining these two experiments, it can often take more than a single experiment to arrive at meaningful answers. Oftentimes the data resulting from the first experiment provides clarity and refinement for a second, more accurate experiment (ie before the first experiment, we didn’t know what we didn’t know… now we do). Let’s explore this in the next section!
 ## Lab
