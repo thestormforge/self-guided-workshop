@@ -4,28 +4,72 @@
 In this module, we'll focus on installing the requisite CLI tools, cloning the workshop repo, and signing up for a StormForge Optimize trial account that we'll use to run our experiments.
 
 ## Lab
+
 ### Prerequisites
 Verify that the following tools have been installed on the machine you intend to participate in the workshop with.
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 2. [stormforge CLI](https://docs.stormforge.io/optimize-pro/getting-started/install/#installing-the-stormforge-command-line-interface)
 3. [Git](https://github.com/git-guides/install-git)
 
-### Clone the Workshop Repo
+### Hands On
+
+___
+
+#### Setting the KUBECONFIG environment variable (Optional)
+
+For those attending a guided workshop, a kubeconfig file will be provided by the StormForge team.
+
+While there are many methods for adding and managing contexts to an existing kubeconfig, you may choose to save your existing KUBECONFIG environment variable settings and temporarily use the kubeconfig file provided by the StormForge team.
+
+For more comprehensive documentation covering how to managing access to multiple Kubernetes clusters, please visit the documentation [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#set-the-kubeconfig-environment-variable).
+
+##### **Step 1** Export your current KUBECONFIG settings
+
+###### Mac/Linux<br>
+    export KUBECONFIG_SAVED="$KUBECONFIG"
+###### Windows PowerShell<br>
+    $Env:KUBECONFIG_SAVED=$ENV:KUBECONFIG
+
+##### **Step 2** Modify your KUBECONFIG environment variable
+
+###### Mac/Linux<br>
+    export KUBECONFIG="${KUBECONFIG}:<path to kubeconfig>"
+##### Windows PowerShell<br>
+    $Env:KUBECONFIG=("<path to kubeconfig>")
+
+##### **Step 3** Returning your KUBECONFIG values to normal
+**<table><tr><td>Please note: This step should only be completed at the conclusion of the lab</td></tr></table>**
+To return your KUBECONFIG values to their previously saved state:
+
+###### Mac/Linux<br>
+    export KUBECONFIG="$KUBECONFIG_SAVED"
+
+###### Windows PowerShell<br>
+    $Env:KUBECONFIG=$ENV:KUBECONFIG_SAVED
+
+___ 
+
+
+#### Clone the Workshop Github Repository
 Once your prerequisite CLI tools have been installed on your machine, the first step will be to clone the workshop repo to a local directory.
 
-`git clone https://github.com/thestormforge/self-guided-workshop.git`
+    git clone https://github.com/thestormforge/examples.git
 
-### Sign up for a StormForge Optimize Trial Account
+___
+
+#### Sign up for a StormForge Optimize Trial Account
 1. visit [https://app.stormforge.io](https://app.stormforge.io)<br>
 ![signup-with-labels](/Java/Assets/Images/signup-labeled.png)
 
 <sub>
-1. Click "Sign Up"
-2. Enter your corporate email and choose a password
-3. Check the box to agree to the StormForge Terms of Service and Privacy Policy
+1. Click "Sign Up"<br>
+2. Enter your corporate email and choose a password<br>
+3. Check the box to agree to the StormForge Terms of Service and Privacy Policy<br>
 4. Click "Sign Up >"</sub>
 
-### Confirm your account via email
+___
+
+#### Confirm your account via email
 After you've signed up, you'll receive an email message to confirm your account.
 
 ![confirmation email](/Java/Assets/Images/confirmation-email.png)
