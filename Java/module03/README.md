@@ -145,7 +145,7 @@ Using your favorite text editor, open up `examples/java/pet-clinic/experiments/e
 
 If you have not done so already, authenticate with the StormForge cloud services using the stormforge CLI tool using the command below. Note that using the --force flag will simply force a re-login if you were already logged in.
 
-`❯ stormforge login --force`
+    stormforge login --force
 
 Opening your default browser to visit:
 
@@ -157,14 +157,14 @@ Opening your default browser to visit:
 
 Validate logged-in status with the CLI tool as well.
 
-    ❯ stormforge ping                                                                                                                                                                                                                                 7m 4s
+    stormforge ping                                                                                                                                                                                                                                 7m 4s
     PING api.stormforge.io (54.85.38.4, 34.231.143.103, 23.22.11.158): HTTP/1.1
     PONG time=315.235ms
 
 
 Finally, validate that `kubectl` is correctly authenticated:
 
-    ❯ kubectl get nodes
+    kubectl get nodes
     NAME                             STATUS   ROLES    AGE    VERSION
     ip-192-168-56-110.ec2.internal   Ready    <none>   43m    v1.21.12-eks-5308cf7
     ip-192-168-8-109.ec2.internal    Ready    <none>   134m   v1.21.12-eks-5308cf7
