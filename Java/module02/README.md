@@ -60,8 +60,7 @@ The workshop host should be able to provide guidance on which should be used (FQ
 
 #### Explore application from web browser
 
-Using the External IP we discovered above, let’s access Pet Clinic in a web browser:
->image placeholder
+Using the External IP we discovered above, let’s access Pet Clinic in a web browser.
 
 Let’s find some pet owners from the home page:
 
