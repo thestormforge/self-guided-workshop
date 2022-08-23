@@ -28,7 +28,7 @@ When properly applied to resource management in Kubernetes, machine learning wil
 ## What is StormForge Optimize Pro?
 StormForge Optimize Pro is a ML-powered tool for experimenting with application configurations in Kubernetes. With the StormForge Optimize Pro Controller installed in your cluster, you can run experiments that rapidly iterate application parameter values and measure their outcome via one or more metrics.
 
-![trial-flow-controller](/Java/Assets/Images/trial-flow-controller.png)
+![trial-flow-controller](/Java/Assets/Images/trial-flow-controller-updated.png)
 
 By continuously testing application configurations in a rapid experimentation loop powered by machine learning, StormForge Optimize Pro is able to hone in on the optimal configurations that meet or exceed your goals, reducing overall time and human effort by thousands of hours per year.
 
