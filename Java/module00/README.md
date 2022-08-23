@@ -1,11 +1,12 @@
-# An Introduction to StormForge Optimize Pro
+# An Introduction to Machine Learning-Based Optimization
 
-### What problem does StormForge Optimize Pro solve?
+## Solving for Kubernetes Complexity at Scale
 Managing application parameters for Kubernetes deployments is difficult at best and near impossible at scale.
 
 Beyond setting basic Kubernetes native deployment parameters like `requests` and `limits`, there are a whole host of *application-specific* environment variables that directly impact both application performance and the total cost to run the application.
 
 ![Kubernetes Parameters Can Be Complicated!](/Java/Assets/Images/k8s-param-gauges.png)
+
 <sub>Figure 1: Application parameters can include resource `requests` and `limits` as well as other variables like `HEAP_SIZE`, `PARALLEL_GC_THREADS`, and many more. </sub>
 
 The default behavior is to overprovision resources, ship features quickly, and worry about efficiency *(read: cost overruns)* later.
@@ -14,36 +15,26 @@ As organizations mature, it's common to create initiatives that result in the ne
 
 In the end, exhaustive tuning of these applications may not seem worth the effort.
 
-### How does StormForge Optimize Pro solve this problem?
-StormForge Optimize Pro is a tool for experimenting with application configurations in Kubernetes. With the StormForge Optimize Pro Controller installed in your cluster, you can run experiments that rapidly iterate application parameter values and measure their outcome via one or more metrics.
+## The Role of Machine Learning
 
-#### What is an Experiment?
-An Experiment is the basic unit of organization in StormForge Optimize. The purpose of an experiment is to try different configurations of an application’s parameters and measure their impact.
+![multi-regression](/Java/Assets/Images/multi-regression.png)
 
-Experiments are objects written in YAML and when submitted via `kubectl`, autonomously follow an execution timeline until the configured `experimentBudget` is exhausted :
+Machine learning has become a powerful tool for analyzing large datasets to discover patterns and insights for easier human consumption. Today, these ML-based insights serve to ease decision making for everything from setting your home thermostat to driving your car safely.
 
-![Experiment Lifecycle](/Java/Assets/Images/experiment-timeline.png)
-<sub>Figure 2. StormForge Optimize Pro's Experiment Cycle</sub>
+![generic-experiment-results](/Java/Assets/Images/generic-experiment-results.png)
 
-Once the Experiment is completed, the results can be viewed via the [StormForge Optimize Web User Interface](https://app.stormforge.io) or via the `stormforge` CLI.
+When properly applied to resource management in Kubernetes, machine learning will prove essential to ensuring the myriad of deployment parameters are properly set to achieve optimal goals like performance and resource efficiency at scale.
 
-#### Experiment Results
-Experiment results are plotted on a chart where each axis represents a `metric` used to inform the machine learning in what ways to optimize an `application`.
+## What is StormForge Optimize Pro?
+StormForge Optimize Pro is a ML-powered tool for experimenting with application configurations in Kubernetes. With the StormForge Optimize Pro Controller installed in your cluster, you can run experiments that rapidly iterate application parameter values and measure their outcome via one or more metrics.
 
-In the example below, an Experiment was run to optimize a Java-based application to minimize the **duration** (Y-Axis) of a performance test while also minimizing the **cost** (X-Axis) of the application under load.
+![trial-flow-controller](/Java/Assets/Images/trial-flow-controller.png)
 
->image placeholder
+By continuously testing application configurations in a rapid experimentation loop powered by machine learning, StormForge Optimize Pro is able to hone in on the optimal configurations that meet or exceed your goals, reducing overall time and human effort by thousands of hours per year.
 
-StormForge machine learning rapidly iterates parameter configurations, measures their results, and plots each result on the graph.
-
-The baseline configuration is marked in **<span style="color:blue">blue</span>**:
->image placeholder
-
-Optimal configurations are marked in **<span style="color:orange">orange</span>**:
->image placeholder
-
-*this is incomplete*
-
+## Additional Information
+* Learn more about StormForge Optimize at [https://www.stormforge.io](https://www.stormforge.io)
+* Visit the [StormForge YouTube Channel](https://www.youtube.com/channel/UCW05S9esT9PKb9tkLrnbUoA)
 
 
 
