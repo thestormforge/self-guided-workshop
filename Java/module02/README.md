@@ -39,7 +39,7 @@ Use `kubectl` to retrieve all the key kubernetes objects associated with Pet Cli
 
     NAME            TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
     pet-clinic      ClusterIP      10.0.110.153   <none>          8080/TCP       15h
-    pet-clinic-lb   LoadBalancer   10.0.79.183    20.80.189.114   80:32538/TCP   15h
+    pet-clinic-lb   LoadBalancer   10.0.79.183    20.XX.XXX.XXX   80:32538/TCP   15h
 
 
 In this workshop we are only running Pet Clinic with a single pod. While Pet Clinic can be configured to run against a persistent database such as Postgres or MariaDB, we are using an embedded, in-memory database for the workshop.
