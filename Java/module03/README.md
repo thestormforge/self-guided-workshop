@@ -2,7 +2,11 @@
 
 ## Overview
 
-In this module we will be creating and starting a Pet Clinic experiment to explore the JVM startup times resulting from various CPU and memory pod resource settings. Why is this information useful to know you might ask? The reason is that once resulting startup times are known for specific input values of CPU and memory, you can now make informed decisions on how many resources to allocate to your app so that you can ensure the app will start in a reasonable amount of time and balance that against ensuring the app can be quickly scheduled by Kubernetes. In addition, once you know startup times for your app, you can also: 
+In this module we will be creating and starting a Pet Clinic experiment to explore the JVM startup times resulting from various CPU and memory pod resource settings.
+
+![pet-clinic-experiment-over](/Java/Assets/Images/pet-clinic-experiment-over.png)
+
+Why is this information useful to know you might ask? The reason is that once resulting startup times are known for specific input values of CPU and memory, you can now make informed decisions on how many resources to allocate to your app so that you can ensure the app will start in a reasonable amount of time and balance that against ensuring the app can be quickly scheduled by Kubernetes. In addition, once you know startup times for your app, you can also: 
 
 * Tune/set ideal Startup/Readiness probe time settings, without guesswork, ensuring the quickest time for a pod to be ready for service
 * Know how long additional capacity deployed during an HPA scaling event will take before being available. This is a combination of the app startup time and how quickly it passes its startup/readiness probes. In some cases, this info can also be used to determine what utilization threshold to set and when the HPA should scale to compensate for pod spin-up lead times.
@@ -24,7 +28,7 @@ We will explore the specifics of an experiment further as we create the Pet Clin
 
 ## Lab
 ### Details
-Namespace: `examples`<br>
+Namespace: `pet-clinic`<br>
 Deployment: `pet-clinic`<br>
 Service: `pet-clinic`<br>
 Ingress: `pet-clinic`<br>
@@ -126,8 +130,9 @@ If the trial job or trial setup tasks require specific RBAC permissions, appropr
 ## Hands-on
 ### Clone examples repo
 
-Change directory to a good working directory and then run<br>
-`> git clone https://github.com/thestormforge/examples.git`
+If you have't completed this step from **MOD01**, change directory to a good working directory and then run<br>
+
+    git clone https://github.com/thestormforge/examples.git
 
 This repo contains several example experiments. For this module we will be using the files located in `examples/java/pet-clinic/experiments/`
 
@@ -168,8 +173,10 @@ Finally, validate that `kubectl` is correctly authenticated:
 
 Create the experiment:
 
-    ❯ cd examples/java/pet-clinic
-    ❯ kubectl apply -f experiments/experiment-startup.yaml
+    cd examples/java/pet-clinic
+    kubectl apply -f experiments/experiment-startup.yaml
+
+Output:
 
     experiment.optimize.stormforge.io/pet-clinic-startup created
     serviceaccount/optimize-setup-sa created
@@ -178,7 +185,10 @@ Create the experiment:
 
 To monitor the status of the trials, run the following command and look for similar output below:
 
-    ❯ kubectl -n examples get trials -w
+    kubectl -n examples get trials -w
+<br>
+Output:
+
     NAME                     STATUS       ASSIGNMENTS            VALUES
     pet-clinic-startup-000   Setting up   cpu=300, memory=1000
     pet-clinic-startup-000   Setting up   cpu=300, memory=1000
@@ -201,7 +211,9 @@ Though the experiment has been well tested, you may want to try modifying the ex
 
 Optimize Pro Controller Logs:
 
-    ❯ kubectl -n stormforge-system logs `kubectl -n stormforge-system get pods | grep optimize-controller | cut -d " " -f1`
+    kubectl -n stormforge-system logs `kubectl -n stormforge-system get pods | grep optimize-controller | cut -d " " -f1`
+<br>
+Output:
 
     …
     {"level":"info","ts":1660765923.0315225,"logger":"controllers.Server","msg":"Created new trial","experiment":"examples/pet-clinic-startup","reportTrialURL":"https://api.stormforge.io/v1/experiments/pet-clinic-startup/trials/67","assignments":[{"name":"cpu","value":1106},{"name":"memory","value":688}]}
@@ -216,26 +228,25 @@ Optimize Pro Controller Logs:
 
 Experiment resource description (look toward the end of the output for `Status` and `Events` info:
 
-    ❯ kubectl -n examples describe experiment pet-clinic-startup
-
+    kubectl -n examples describe experiment pet-clinic-startup
     …
     Status:
-     Active Trials:  1
-     Phase:          Running
+    Active Trials:  1
+    Phase:          Running
     Events:           <none>
 
 Pet Clinic pod description and/or app logs:
 
-    ❯ kubectl -n examples describe pod pet-clinic-6b6cb7c68f-w226w
+    kubectl -n examples describe pod pet-clinic-6b6cb7c68f-w226w
 
-    ❯ kubectl -n examples describe pod pet-clinic-6b6cb7c68f-w226w
+    kubectl -n examples describe pod pet-clinic-6b6cb7c68f-w226w
 
 
 Finally, description and/or logs from the specific trial job pod (note that the number in the pod name below corresponds to the trial number of the experiment:
 
-    ❯ kubectl -n examples describe pod pet-clinic-startup-001-hllrd
+    kubectl -n examples describe pod pet-clinic-startup-001-hllrd
 
-    ❯ kubectl -n examples logs pod pet-clinic-startup-001-hllrd
+    kubectl -n examples logs pod pet-clinic-startup-001-hllrd
 
 
 ## Additional information
