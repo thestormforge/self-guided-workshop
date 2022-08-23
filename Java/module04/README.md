@@ -136,8 +136,9 @@ This experiment required specific RBAC setup during the experiment along with a 
 
 Visit https://app.stormforge.io (you will be redirect to an authentication page) and login using the provided shared workshop login credentials:
 
- ![browser-address](/Java/Assets/Images/browser-address.png)
- ![browser-login](/Java/Assets/Images/browser-login.png)
+![browser-address](/Java/Assets/Images/browser-address.png)
+
+![browser-login](/Java/Assets/Images/browser-login.png)
 
 #### Explore `pet-clinic-latency-gc-jit` experiment
 
