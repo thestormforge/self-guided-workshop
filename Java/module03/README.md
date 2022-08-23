@@ -1,4 +1,4 @@
-# MOD003 - Pet Clinic Startup Experiment
+# MOD03 - Pet Clinic Startup Experiment
 
 ## Overview
 
@@ -254,3 +254,5 @@ Finally, description and/or logs from the specific trial job pod (note that the 
 * StormForge [examples repository](https://github.com/thestormforge/examples)
 * Pet Clinic official [Github repository](https://github.com/spring-projects/spring-petclinic)
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
+
+**You have completed MOD03. You may now proceed to MOD04**

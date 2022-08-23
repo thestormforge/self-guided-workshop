@@ -1,7 +1,7 @@
 # MOD01 - Verifying Tools and Access
 
 ## Overview
-In this module, we'll focus on installing the requisite CLI tools, cloning the workshop repo, and signing up for a StormForge Optimize trial account that we'll use to run our experiments.
+In this module, we'll focus on installing the requisite CLI tools, cloning the workshop repo, and signing up for a *StormForge Optimize* trial account that we'll use to run our experiments.
 
 ## Lab
 
@@ -80,9 +80,11 @@ Your default web browser will open and you should see an "Email Verified" messag
 
 ![confirmation web](/Java/Assets/Images/confirmation-web.png)
 
+#### Deploy the *StormForge Optimize Pro* Controller
+
+> Steps to be completed
 
 
-
-
+**You have completed MOD01. You may now proceed to MOD02**
 
 
