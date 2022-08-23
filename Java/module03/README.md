@@ -6,7 +6,7 @@ In this module we will be creating and starting a Pet Clinic experiment to explo
 
 ![pet-clinic-experiment-over](/Java/Assets/Images/pet-clinic-experiment-over.png)
 
-Why is this information useful to know you might ask? The reason is that once resulting startup times are known for specific input values of CPU and memory, you can now make informed decisions on how many resources to allocate to your app so that you can ensure the app will start in a reasonable amount of time and balance that against ensuring the app can be quickly scheduled by Kubernetes. In addition, once you know startup times for your app, you can also: 
+Why is this information useful to know you might ask? The reason is that once resulting startup times are known for specific input values of CPU and memory, you can now make informed decisions on how many resources to allocate to your app so that you can ensure the app will start in a reasonable amount of time and balance that against ensuring the app can be quickly scheduled by Kubernetes. In addition, once you know startup times for your app, you can also:
 
 * Tune/set ideal Startup/Readiness probe time settings, without guesswork, ensuring the quickest time for a pod to be ready for service
 * Know how long additional capacity deployed during an HPA scaling event will take before being available. This is a combination of the app startup time and how quickly it passes its startup/readiness probes. In some cases, this info can also be used to determine what utilization threshold to set and when the HPA should scale to compensate for pod spin-up lead times.
@@ -40,8 +40,8 @@ The Pet Clinic experiment details are outlined below for review. They are also a
 `memory`
 
 **Output metrics:**<br>
-* `Startup Time` - measured as ContainersReady status timestamp minus container (not)s startedAt timestamp. The reasoning behind using these data points is that we do not want to include any possible image fetching time and other scheduling delays when calculating app startup time. We ju
-    * *ContainersReady* `value: kubectl -n ${NAMESPACE} get pod ${APP_POD} -o json | jq -r '.status.conditions[] | select(.status == "True" and .type == "ContainersReady") | .lastTransitionTime'`
+* `Startup Time` - measured as a scraped value from the Pet Clinic startup log file using `'Started PetClinicApplication in (\d+\.*\d*) seconds'` as a search regular expression. If the application didn’t print out a startup time in the logs, it could be calculated as *ContainersReady* status timestamp minus container’s *startedAt* timestamp. The reasoning behind using these data points is that we do not want to include any possible image fetching time and other scheduling delays when calculating app startup time.
+    * *ContainersReady* value: `kubectl -n ${NAMESPACE} get pod ${APP_POD} -o json | jq -r '.status.conditions[] | select(.status == "True" and .type == "ContainersReady") | .lastTransitionTime'`
     * *startedAt* value: `kubectl -n ${NAMESPACE} get pod ${APP_POD} -o json | jq -r '.status.containerStatuses[0].state.running.startedAt'`
 * `Cost` - measured according to the following formula
     * `( (cpu * 17) * (memory * 3) ) / 1000`
