@@ -3,8 +3,8 @@
 ## Overview
 
 Throughout this workshop we will be examining the Pet Clinic application. Pet Clinic is a reference Spring Boot application that uses the traditional MVC architecture that was common across enterprises before the advent of microservices. This monolithic application is a great example of how a “legacy” Java application can not only be successfully containerized and migrated to Kubernetes, but also, as we’ll see throughout the course of this workshop, optimized to run well without requiring a re-write.
->image placeholder
 
+![pet-clinic-overview](/Java/Assets/Images/pet-clinic-overview.png)
 
 Pet Clinic tracks a list of pet owners, their various pets, and the associated pet visits to the clinic for various veterinarian services with standard RESTful CRUD (Create, Read, Update, and Delete) operations.
 
@@ -13,7 +13,7 @@ The instance of Pet Clinic built for this workshop is using Java 8 (OpenJDK 1.8.
 
 ## Lab
 ### Details 
-Namespace: `examples`<br>
+Namespace: `pet-clinic`<br>
 Deployment: `pet-clinic`<br>
 Service: `pet-clinic`<br>
 Ingress: `pet-clinic`
@@ -60,38 +60,44 @@ Using the FQDN we discovered above, let’s access Pet Clinic in a web browser:
 >image placeholder
 
 Let’s find some pet owners from the home page:
->image placeholder
+
+![pet-clinic-find-owners](/Java/Assets/Images/pet-clinic-find-owners.png)
 
 Leave the Last name field empty and click Find Owner:
->image placeholder
+
+![pet-clinic-last-name-field](/Java/Assets/Images/pet-clinic-last-name-field.png)
+
 From the results page, click on Betty Davis
->image placeholder
+
+![pet-clinic-betty](/Java/Assets/Images/pet-clinic-betty.png)
+
 We can see that Betty has a single pet hamster named Basil but has not yet visited the clinic
->image placeholder
+
+![pet-clinic-betty-detail](/Java/Assets/Images/pet-clinic-betty-detail.png)
 
 Feel free to click around to explore Pet Clinic more if needed.
+
 #### A note about load tests
 
-In module 3 we’ll learn a bit more about what comprises an experiment. One of the key components of an experiment is an appropriate trial job that is applied to the application during the experiment. For many performance-based experiments the appropriate trial job is a load test. Modern load testing tools like StormForge Performance Testing or K6 can be used to quickly setup test cases by importing HTTP ARchive (HAR) files and performing some minor modifications. HAR files can be recorded by using the developer tools included with most browsers. 
+In **module 3** we’ll learn a bit more about what comprises an experiment. One of the key components of an experiment is an appropriate trial job that is applied to the application during the experiment. For many performance-based experiments the appropriate trial job is a load test. Modern load testing tools like StormForge Performance Testing or K6 can be used to quickly setup test cases by importing HTTP ARchive (HAR) files and performing some minor modifications. HAR files can be recorded by using the developer tools included with most browsers. 
 
 For Chrome, developer tools can be opened from any page by right-clicking anywhere on the page and choosing Inspect from the context menu:
->image placeholder
 
+![pet-clinic-chrome-inspect](/Java/Assets/Images/pet-clinic-chrome-inspect.png)
 
 From the resulting window that opens click the Network tab and ensure that the Recording button is depressed:
->image placeholder
 
-
+![pet-clinic-developer](/Java/Assets/Images/pet-clinic-developer.png)
 
 Click around the application. As you do, you should notice each new request recorded in the developer tools pane. When you are finished recording all the application operations you need, you can generate the HAR file by right-clicking any entry in the Name pane, choose Copy, then chose Copy all as HAR from the sub menu. This will save the contents of the recording as text into the clipboard.
->image placeholder
 
+~[pet-clinic-copy-har](/Java/Assets/Images/pet-clinic-copy-har.png)
 
 You may have noticed another option: Save all as HAR with content. The reason we do not use this is is that ALL content (images, stylesheets, fonts, etc) will be saved to the file instead of just the HTTP requests.
 
 Once you have your HAR file contents in memory, either paste it to a text file manually (this could take some time) or use a handy tool like pbpaste in Mac OS:
 
-`❯ pbpaste > har.txt`
+    ❯ pbpaste > har.txt
 
 Once you have your HAR file you can import into your choice of load testing tool for further customization.
 
