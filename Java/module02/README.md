@@ -91,7 +91,7 @@ From the resulting window that opens click the Network tab and ensure that the R
 
 Click around the application. As you do, you should notice each new request recorded in the developer tools pane. When you are finished recording all the application operations you need, you can generate the HAR file by right-clicking any entry in the Name pane, choose Copy, then chose Copy all as HAR from the sub menu. This will save the contents of the recording as text into the clipboard.
 
-~[pet-clinic-copy-har](/Java/Assets/Images/pet-clinic-copy-har.png)
+![pet-clinic-copy-har](/Java/Assets/Images/pet-clinic-copy-har.png)
 
 You may have noticed another option: Save all as HAR with content. The reason we do not use this is is that ALL content (images, stylesheets, fonts, etc) will be saved to the file instead of just the HTTP requests.
 
