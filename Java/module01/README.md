@@ -1,7 +1,7 @@
 # MOD01 - Verifying Tools and Access
 
 ## Overview
-In this module, we'll focus on installing the requisite CLI tools, cloning the workshop repo, and signing up for a StormForge Optimize trial account that we'll use to run our experiments.
+In this module, we'll focus on installing the requisite CLI tools, cloning the workshop repo, and signing up for a *StormForge Optimize* trial account that we'll use to run our experiments.
 
 ## Lab
 
@@ -37,7 +37,16 @@ For more comprehensive information covering how to manage access to multiple Kub
 ###### Windows PowerShell<br>
     $Env:KUBECONFIG=("<path to kubeconfig>")
 
-##### **Step 3** Returning your KUBECONFIG values to normal
+#### **Step 3** Verify that you can access your workshop cluster
+
+    kubectl get svc
+
+**Output**
+
+    NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+    kubernetes   ClusterIP   10.0.0.1     <none>        443/TCP   3d15h
+
+##### **Step 4** Returning your KUBECONFIG values to normal
 **<table><tr><td>Please note: This step should only be completed at the conclusion of the lab</td></tr></table>**
 To return your KUBECONFIG values to their previously saved state:
 
@@ -80,9 +89,41 @@ Your default web browser will open and you should see an "Email Verified" messag
 
 ![confirmation web](/Java/Assets/Images/confirmation-web.png)
 
+#### Deploy the *StormForge Optimize Pro* Controller
+
+If you have not installed the `stormforge` CLI, please follow the instructions listed in the *Prerequisites* section of this MOD.
+
+**Using the `stormforge` CLI, install the *StormForge Optimize Pro* controller in your cluster**
+
+    stormforge init
+
+**Confirm that the controller has been deployed**
+
+    kubectl get namespaces
+
+**Output**
+
+        NAME                STATUS   AGE
+    default             Active   3d15h
+    kube-node-lease     Active   3d15h
+    kube-public         Active   3d15h
+    kube-system         Active   3d15h
+    monitoring          Active   3d15h
+    pet-clinic          Active   3d15h
+    stormforge-system   Active   88s
+
+You'll notice a new `stormforge-system` namespace
+
+You can now check to see that the pod has started and is `Running`
+
+    kubectl get pods -n stormforge-system
+
+**Output**
+
+    NAME                                           READY   STATUS    RESTARTS   AGE
+    optimize-controller-manager-576fc5fd59-jcshg   1/1     Running   0          4m6s
 
 
-
-
+**You have completed MOD01. You may now proceed to MOD02**
 
 

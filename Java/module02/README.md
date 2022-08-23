@@ -1,4 +1,4 @@
-# MOD002 - Exploring the Pet Clinic App
+# MOD02 - Exploring the Pet Clinic App
 
 ## Overview
 
@@ -108,3 +108,5 @@ Once you have your HAR file you can import into your choice of load testing tool
 ## Additional information
 * Pet Clinic official [Github repository](https://github.com/spring-projects/spring-petclinic)
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
+
+**You have completed MOD02. You may now proceed to MOD03**

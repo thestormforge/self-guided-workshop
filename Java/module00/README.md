@@ -1,4 +1,4 @@
-# An Introduction to Machine Learning-Based Optimization
+# MOD00 - An Introduction to Machine Learning-Based Optimization
 
 ## Solving for Kubernetes Complexity at Scale
 Managing application parameters for Kubernetes deployments is difficult at best and near impossible at scale.
@@ -25,15 +25,15 @@ Machine learning has become a powerful tool for analyzing large datasets to disc
 
 When properly applied to resource management in Kubernetes, machine learning will prove essential to ensuring the myriad of deployment parameters are properly set to achieve optimal goals like performance and resource efficiency at scale.
 
-## What is StormForge Optimize Pro?
-StormForge Optimize Pro is a ML-powered tool for experimenting with application configurations in Kubernetes. With the StormForge Optimize Pro Controller installed in your cluster, you can run experiments that rapidly iterate application parameter values and measure their outcome via one or more metrics.
+## What is *StormForge Optimize Pro*?
+*StormForge Optimize Pro* is a ML-powered tool for experimenting with application configurations in Kubernetes. With the StormForge Optimize Pro Controller installed in your cluster, you can run experiments that rapidly iterate application parameter values and measure their outcome via one or more metrics.
 
-![trial-flow-controller](/Java/Assets/Images/trial-flow-controller.png)
+![trial-flow-controller](/Java/Assets/Images/trial-flow-controller-updated.png)
 
-By continuously testing application configurations in a rapid experimentation loop powered by machine learning, StormForge Optimize Pro is able to hone in on the optimal configurations that meet or exceed your goals, reducing overall time and human effort by thousands of hours per year.
+By continuously testing application configurations in a rapid experimentation loop powered by machine learning, *StormForge Optimize Pro* is able to hone in on the optimal configurations that meet or exceed your goals, reducing overall time and human effort by thousands of hours per year.
 
 ## Additional Information
-* Learn more about StormForge Optimize at [https://www.stormforge.io](https://www.stormforge.io)
+* Learn more about *StormForge Optimize* at [https://www.stormforge.io](https://www.stormforge.io)
 * Visit the [StormForge YouTube Channel](https://www.youtube.com/channel/UCW05S9esT9PKb9tkLrnbUoA)
 
 
