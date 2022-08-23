@@ -24,7 +24,7 @@ Ingress: `pet-clinic`
 
 Use `kubectl` to retrieve all the key kubernetes objects associated with Pet Clinic
 
-    ❯ kubectl -n examples get all,ingress -l app=pet-clinic
+    ❯ kubectl -n examples get all
     NAME                              READY   STATUS    RESTARTS   AGE
     pod/pet-clinic-76495cfb55-g6bbk   1/1     Running   0          74s
 
@@ -37,26 +37,30 @@ Use `kubectl` to retrieve all the key kubernetes objects associated with Pet Cli
     NAME                                    DESIRED   CURRENT   READY   AGE
     replicaset.apps/pet-clinic-76495cfb55   1         1         1       77s
 
-    NAME                                   CLASS    HOSTS                        ADDRESS                                                                         PORTS   AGE
-    ingress.networking.k8s.io/pet-clinic   <none>   pet-clinic.stormforge.show   a45d762ff9fe44059b7f76ea55edd243-1165a9e8428ca9e8.elb.us-east-1.amazonaws.com   80      35d
+    NAME            TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
+    pet-clinic      ClusterIP      10.0.110.153   <none>          8080/TCP       15h
+    pet-clinic-lb   LoadBalancer   10.0.79.183    20.XX.XXX.XXX   80:32538/TCP   15h
+
 
 In this workshop we are only running Pet Clinic with a single pod. While Pet Clinic can be configured to run against a persistent database such as Postgres or MariaDB, we are using an embedded, in-memory database for the workshop.
 
 
-#### Find publicly accessible hostname
+#### Find publicly accessible hostname / external IP
 
-In order to publicly access Pet Clinic, we need to know either a resolvable FQDN (fully-qualified domain name, either an A or CNAME) or a publicly accessible IP address, along with the IP port. We can obtain this by getting details for the Pet Clinic ingress object:
+In order to publicly access Pet Clinic, we need to know either a resolvable FQDN (fully-qualified domain name, either an A or CNAME) or a publicly accessible IP address, along with the IP port. We can obtain this by getting details for the Pet Clinic LoadBalancer object:
 
-    ❯ kubectl -n examples get ingress/pet-clinic
-    NAME         CLASS    HOSTS                        ADDRESS                                                                         PORTS   AGE
-    pet-clinic   <none>   pet-clinic.stormforge.show   a45d762ff9fe44059b7f76ea55edd243-1165a9e8428ca9e8.elb.us-east-1.amazonaws.com   80      35d
+    ❯ kubectl get svc -n pet-clinic
+      NAME            TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
+      pet-clinic      ClusterIP      10.0.110.153   <none>          8080/TCP       15h
+      pet-clinic-lb   LoadBalancer   10.0.79.183    20.XX.XXX.XXX   80:32538/TCP   15h
+
 
 The workshop host should be able to provide guidance on which should be used (FQDN or Address) for browser access.
 
 
 #### Explore application from web browser
 
-Using the FQDN we discovered above, let’s access Pet Clinic in a web browser:
+Using the External IP we discovered above, let’s access Pet Clinic in a web browser:
 >image placeholder
 
 Let’s find some pet owners from the home page:
