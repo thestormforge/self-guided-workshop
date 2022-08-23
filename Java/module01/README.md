@@ -19,9 +19,9 @@ ___
 
 For those attending a guided workshop, a kubeconfig file will be provided by the StormForge team.
 
-While there are many methods for adding and managing contexts to an existing kubeconfig, you may choose to save your existing KUBECONFIG environment variable settings and temporarily use the kubeconfig file provided by the StormForge team.
+While there are many methods for adding and managing contexts in an existing kubeconfig, you may choose to save your existing $KUBECONFIG environment variable settings and temporarily use the kubeconfig file provided by the StormForge team.
 
-For more comprehensive documentation covering how to managing access to multiple Kubernetes clusters, please visit the documentation [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#set-the-kubeconfig-environment-variable).
+For more comprehensive information covering how to manage access to multiple Kubernetes clusters, please visit the documentation [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#set-the-kubeconfig-environment-variable).
 
 ##### **Step 1** Export your current KUBECONFIG settings
 

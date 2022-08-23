@@ -4,14 +4,20 @@
 
 ---
 
-### Prerequisites:
+## Prerequisites:
 * [Minimum Kubernetes Cluster Requirements](https://docs.stormforge.io/optimize-pro/getting-started/quickstart/#prerequisites)
 
-### Agenda:
-* [Module00 - An Introduction to StormForge Optimize Pro](/Java/module00/README.md) *(optional)*
-* [Module01 - Provision Access to StormForge Optimize](README.md) *(x min)*
-* [Module02 - Deploy a Sample Java Application](README.md) *(x min)*
-* [Module03 - Create and Submit an Optimize Pro experiment](README.md) *(x min)*
-* [Module04 - Explore ML-Results for Various Java Apps](README.md) *(x min)*
-* [Module05 - Review Experiment Results](README.md) *(x min)*
+Verify that the following tools have been installed on the machine you intend to participate in the workshop with.
+
+1. [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
+2. [stormforge CLI](https://docs.stormforge.io/optimize-pro/getting-started/install/#installing-the-stormforge-command-line-interface)
+3. [Git](https://github.com/git-guides/install-git)
+
+## Agenda:
+* [Module00 - An Introduction to Machine Learning-based Optimization](/Java/module00/README.md) *(optional)*
+* [Module01 - Verifying Tools and Access](/Java/module01/README.md) *(~30 min)*
+* [Module02 - Exploring a Sample Java Application](/Java/module02/README.md) *(~30 min)*
+* [Module03 - Optimizing a Sample Java Application](/Java/module03/README.md) *(~60 min)*
+* [Module04 - Explore ML-Results for Various Optimization Goals](/Java/module04/README.md) *(~60 min)*
+* [Module05 - Review Experiment Results](README.md) *(~30 min)*
 * [Module06 - Wrap Up](README.md) *(optional)*
