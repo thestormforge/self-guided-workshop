@@ -34,7 +34,7 @@ For more comprehensive information covering how to manage access to multiple Kub
 
 ###### Mac/Linux<br>
     export KUBECONFIG="${KUBECONFIG}:<path to kubeconfig>"
-##### Windows PowerShell<br>
+###### Windows PowerShell<br>
     $Env:KUBECONFIG=("<path to kubeconfig>")
 
 ##### **Step 3** Returning your KUBECONFIG values to normal
