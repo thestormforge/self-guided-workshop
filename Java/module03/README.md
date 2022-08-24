@@ -55,7 +55,7 @@ We are only patching the Deployment object for Pet Clinic. In it we are setting 
       kind: Deployment
       apiVersion: apps/v1
       name: pet-clinic
-      namespace: examples
+      namespace: pet-clinic
     patch: |
       spec:
         template:
@@ -110,7 +110,7 @@ We are only patching the Deployment object for Pet Clinic. In it we are setting 
                 imagePullPolicy: Always
                 env:
                 - name: NAMESPACE
-                  value: examples
+                  value: pet-clinic
                 - name: APP_NAME
                   value: pet-clinic
               serviceAccountName: optimize-setup-sa
@@ -185,7 +185,7 @@ Output:
 
 To monitor the status of the trials, run the following command and look for similar output below:
 
-    kubectl -n examples get trials -w
+    kubectl -n pet-clinic get trials -w
 <br>
 Output:
 
@@ -228,7 +228,7 @@ Output:
 
 Experiment resource description (look toward the end of the output for `Status` and `Events` info:
 
-    kubectl -n examples describe experiment pet-clinic-startup
+    kubectl -n pet-clinic describe experiment pet-clinic-startup
     …
     Status:
     Active Trials:  1
@@ -237,16 +237,16 @@ Experiment resource description (look toward the end of the output for `Status` 
 
 Pet Clinic pod description and/or app logs:
 
-    kubectl -n examples describe pod pet-clinic-6b6cb7c68f-w226w
+    kubectl -n pet-clinic describe pod pet-clinic-6b6cb7c68f-w226w
 
-    kubectl -n examples describe pod pet-clinic-6b6cb7c68f-w226w
+    kubectl -n pet-clinic describe pod pet-clinic-6b6cb7c68f-w226w
 
 
 Finally, description and/or logs from the specific trial job pod (note that the number in the pod name below corresponds to the trial number of the experiment:
 
-    kubectl -n examples describe pod pet-clinic-startup-001-hllrd
+    kubectl -n pet-clinic describe pod pet-clinic-startup-001-hllrd
 
-    kubectl -n examples logs pod pet-clinic-startup-001-hllrd
+    kubectl -n pet-clinic logs pod pet-clinic-startup-001-hllrd
 
 
 ## Additional information
