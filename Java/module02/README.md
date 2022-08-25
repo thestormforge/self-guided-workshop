@@ -16,7 +16,7 @@ The instance of Pet Clinic built for this workshop is using Java 8 (OpenJDK 1.8.
 Namespace: `pet-clinic`<br>
 Deployment: `pet-clinic`<br>
 Service: `pet-clinic`<br>
-Ingress: `pet-clinic`
+LoadBalancer: `pet-clinic`
 
 ### Hands-on
 
@@ -24,7 +24,7 @@ Ingress: `pet-clinic`
 
 Use `kubectl` to retrieve all the key kubernetes objects associated with Pet Clinic
 
-    ❯ kubectl -n examples get all
+    ❯ kubectl -n pet-clinic get all
     NAME                              READY   STATUS    RESTARTS   AGE
     pod/pet-clinic-76495cfb55-g6bbk   1/1     Running   0          74s
 
