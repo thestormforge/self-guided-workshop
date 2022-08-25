@@ -39,7 +39,7 @@ For more comprehensive information covering how to manage access to multiple Kub
 
 #### **Step 3** Verify that you can access your workshop cluster
 
-    kubectl get svc
+    kubectl get svc -n default
 
 **Output**
 
