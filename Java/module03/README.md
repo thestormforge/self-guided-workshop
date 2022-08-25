@@ -36,12 +36,15 @@ Ingress: `pet-clinic`<br>
 The Pet Clinic experiment details are outlined below for review. They are also already included in the example `experiment` YAML file referenced in the lab steps further below.
 
 **Input parameters (same setting for both requests and limits):**<br>
-`cpu`<br>
-`memory`<br>
-`gc_newRatio`<br>
-`gc_survivorRatio`<br>
-`initialCodeCacheSize`<br>
-`threadStackSize`<br>
+<sub>Resources</sub>
+* `cpu`<br>
+* `memory`<br>
+
+<sub>Java Environment Variables</sub><br>
+* `gc_newRatio`<br>
+* `gc_survivorRatio`<br>
+* `initialCodeCacheSize`<br>
+* `threadStackSize`<br>
 
 **Output metrics:**<br>
 * `Startup Time` - measured as a scraped value from the Pet Clinic startup log file using `'Started PetClinicApplication in (\d+\.*\d*) seconds'` as a search regular expression. If the application didn’t print out a startup time in the logs, it could be calculated as *ContainersReady* status timestamp minus container’s *startedAt* timestamp. The reasoning behind using these data points is that we do not want to include any possible image fetching time and other scheduling delays when calculating app startup time.
