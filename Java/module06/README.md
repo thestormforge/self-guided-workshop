@@ -2,6 +2,8 @@
 
 ## Summary
 
+![congratulations-java](/Java/Assets/Images/congratulations-java.png)
+
 The purpose of today’s Hands-on Workshop was to introduce you to a world of ML-based experimentation for Kubernetes-based applications and to apply that knowledge specifically toward tuning Java applications in Kubernetes. Along the way we learned about several JVM tunables that can be leveraged (tons more to explore on your own) and how ML can help speed along the exploration and exploitation of these JVM tunables.
 ## Lab
 ### Details
