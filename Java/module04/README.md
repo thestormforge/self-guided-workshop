@@ -1,4 +1,4 @@
-# MOD04 - P95 Latency Experiments
+# MOD04 - P95 Latency Java Experiment
 
 ## Overview
 
