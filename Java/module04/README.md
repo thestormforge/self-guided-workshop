@@ -136,43 +136,61 @@ This experiment required specific RBAC setup during the experiment along with a 
 
 Visit https://app.stormforge.io (you will be redirect to an authentication page) and login using the provided shared workshop login credentials:
 
-![browser-address](/Java/Assets/Images/browser-address.png)
+<p align="center">
+  <img src="/Java/Assets/Images/browser-address.png" />
+</p>
 
-![browser-login](/Java/Assets/Images/browser-login.png)
+<p align="center">
+  <img src="/Java/Assets/Images/browser-login.png" />
+</p>
 
 #### Explore `pet-clinic-latency-gc-jit` experiment
 
 From the main page, choose the `pet-clinic` application…
 
-![mod04-walkthrough-1](/Java/Assets/Images/mod04-walkthrough-1.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-1.png" />
+</p>
 
 …and then the pet-clinic-p95-latency scenario:
 
-![mod04-walkthrough-2](/Java/Assets/Images/mod04-walkthrough-2.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-2.png" />
+</p>
 
 Click the  pet-clinic-latency-gc-jit experiment to view the results:
 
-![mod04-walkthrough-3](/Java/Assets/Images/mod04-walkthrough-3.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-3.png" />
+</p>
 
 Notice the apparent trendline of peach and orange colored dots in the scatter plot shown. This is known as a Pareto front. Essentially this is the frontier of optimal data points for the given output metrics plotted on the X and Y axis and indicates a true tradeoff relationship between these metrics.
 
-![mod04-walkthrough-4](/Java/Assets/Images/mod04-walkthrough-4.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-4.png" />
+</p>
 
 By using ML to drive experimentation and establish correlations between various combinations of input parameter values and associated measured output metric values, *StormForge Optimize Pro* facilitates the fast discovery of this Pareto front enabling us to see a clear visual pattern for what the data is telling us. In this case, we can see that though the app team may have done some initial optimization to establish the current baseline configuration, it looks like there are better performing, and cheaper options (we can have our cake and eat it too in this case)!
 
 Click the baseline square dot shown in blue. A large tooltip appears providing quick details of the baseline experiment trial:
 
-![mod04-walkthrough-5](/Java/Assets/Images/mod04-walkthrough-5.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-5.png" />
+</p>
 
 This baseline trial is usually the first trial to run, is configured to run the application as it currently exists, and serves as the basis for comparison between any other trial. 
 
 If you scroll down toward the bottom page, you can see the full details of this selected baseline trial including the current input parameter values used for the trial, the range of values for the input parameters that is configured for ML to explore, and finally the resulting metrics measurements.  As you click other trial data points, you can scroll back down here to see how those particular trial details compare against the baseline and recommended results.
 
-![mod04-walkthrough-6](/Java/Assets/Images/mod04-walkthrough-6.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-6.png" />
+</p>
 
 Scroll back up to the graph and click the recommended square dot shown in orange and scroll down toward the bottom of the page. Notice the input values and resulting output metric values in comparison to the baseline values.
 
-![mod04-walkthrough-7](/Java/Assets/Images/mod04-walkthrough-7.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-7.png" />
+</p>
 
 *StormForge Optimize Pro* will typically recommend a trial that exists on the Pareto front that represents a good balance between the two trade-off metrics displayed. Having said this, keep in mind that only you or someone from your application product team really understands which metric takes highest priority. The thing to keep in mind is that you know which direction to move on the Pareto front to choose the configuration setting that best fits your specific needs.
 
@@ -183,18 +201,24 @@ As mentioned in this module’s overview section, once we have data in hand we c
 
 Scroll back up to the main graph at the top of the page. To the right of the graph there are three dropdown boxes. The first box labeled *Filter By* allows us to choose which trials we would like to have plotted on the graph. The next two allow us to choose which data we would like to have plotted on the *X-Axis* and *Y-Axis* respectively. Click the *X-Axis* dropdown and choose *Memory* from the list:
 
-![mod04-walkthrough-8](/Java/Assets/Images/mod04-walkthrough-8.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-8.png" />
+</p>
 
 The graph should be updated and show something similar to the following:
 
-![mod04-walkthrough-9](/Java/Assets/Images/mod04-walkthrough-9.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-9.png" />
+</p>
 
 Notice that, though there are a few optimal data points between 900MB and 1650MB or Memory, all the rest of the optimal data points show memory configurations using 600MB - 650MB. This indicates that ML recognized that there was no correlation between memory values and performance. In addition, since ML was asked to minimize the resource cost, ML determined it was ok to use the lowest memory settings from the range and still achieve the performance gains.
 
 
 If Pet Clinic isn’t memory bound, let’s see what a CPU bound application looks like. Choose *CPU* from the *X-Axis* dropdown. The graph should be updated and show something similar to the following:
 
-![mod04-walkthrough-10](/Java/Assets/Images/mod04-walkthrough-10.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-10.png" />
+</p>
 
 Notice that the *CPU* vs *P95* graph strongly resembles the Pareto front curve from the *Cost vs P95* graph we first examined. This indicates that ML found a very strong correlation between cpu values and P95 latency results. This indicates that this application is indeed a CPU bound application. The more CPU we throw at Pet Clinic, the better it will perform for this specific load scenario. The graph also shows us where the point of diminishing returns exists (right at the recommended datapoint) where larger jumps in CPU values give us less and less latency improvements.
 
@@ -204,13 +228,17 @@ Finally, let’s examine two of the other JVM tuneable input parameters that ML 
 
 Choose *GC Survivor Ratio* from the *X-Axis* dropdown.
 
-![mod04-walkthrough-11](/Java/Assets/Images/mod04-walkthrough-11.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-11.png" />
+</p>
 
 Notice that the majority of the optimal data points use values of 8 or 9. ML favored these values most for the optimal points. Given that 8 is the default value for this setting in the JVM, it could be left unmodified based on these results.
 
 Next choose *Initial Code Cache Size* from the *X-Axis* dropdown.
 
-![mod04-walkthrough-12](/Java/Assets/Images/mod04-walkthrough-12.png)
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-12.png" />
+</p>
 
 For this setting, ML favored values between 900k and 1500k (most heavily favored). This is a drastic difference from the default JVM value of 500. As a result, we can conclude that this setting has a moderately strong impact on the overall results. 
 
