@@ -46,5 +46,5 @@ By continuously testing application configurations in a rapid experimentation lo
 
 
 <p align="center">
-  <b>You have completed MOD00. You may now proceed to MOD01.</b>
+  <b>You have completed MOD00. You may now proceed to [Mod01](/Java/module01/README.md).</b>
 </p>
