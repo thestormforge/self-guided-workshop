@@ -14,10 +14,10 @@ Verify that the following tools have been installed on the machine you intend to
 3. [Git](https://github.com/git-guides/install-git)
 
 ## Agenda:
-* [Module00 - An Introduction to Machine Learning-based Optimization](/Java/module00/README.md) *(~30)*
+* [Module00 - An Introduction to Machine Learning-based Optimization](/Java/module00/README.md) *(~30 min)*
 * [Module01 - Verifying Tools and Access](/Java/module01/README.md) *(~30 min)*
 * [Module02 - Exploring a Sample Java Application](/Java/module02/README.md) *(~30 min)*
 * [Module03 - Optimizing a Sample Java Application](/Java/module03/README.md) *(~60 min)*
 * [Module04 - Explore ML-Results for Various Optimization Goals](/Java/module04/README.md) *(~60 min)*
 * [Module05 - Review Experiment Results](README.md) *(~30 min)*
-* [Module06 - Wrap Up](README.md) *(~15)*
+* [Module06 - Wrap Up](README.md) *(~15 min)*
