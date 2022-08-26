@@ -4,7 +4,9 @@
 
 In this module we will be creating and starting a Pet Clinic experiment to explore the JVM startup times resulting from various CPU and memory pod resource settings.
 
-![pet-clinic-experiment-over](/Java/Assets/Images/pet-clinic-experiment-over.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-experiment-over.png" />
+</p>
 
 Why is this information useful to know you might ask? The reason is that once resulting startup times are known for specific input values of CPU and memory, you can now make informed decisions on how many resources to allocate to your app so that you can ensure the app will start in a reasonable amount of time and balance that against ensuring the app can be quickly scheduled by Kubernetes. In addition, once you know startup times for your app, you can also:
 
@@ -262,4 +264,6 @@ Finally, description and/or logs from the specific trial job pod (note that the 
 * Pet Clinic official [Github repository](https://github.com/spring-projects/spring-petclinic)
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
 
-**You have completed MOD03. You may now proceed to MOD04**
+<p align="center">
+  <b>You have completed MOD03. You may now proceed to MOD04.</b>
+</p>
