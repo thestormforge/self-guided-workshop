@@ -126,5 +126,5 @@ Once you have your HAR file you can import into your choice of load testing tool
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
 
 <p align="center">
-  <b>You have completed MOD02. You may now proceed to MOD03.</b>
+  <b>You have completed MOD02. You may now proceed to <a href="/Java/module03/README.md">MOD03</a>.</b>
 </p>
