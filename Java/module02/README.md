@@ -86,15 +86,21 @@ In **module 3** we’ll learn a bit more about what comprises an experiment. One
 
 For Chrome, developer tools can be opened from any page by right-clicking anywhere on the page and choosing Inspect from the context menu:
 
-![pet-clinic-chrome-inspect](/Java/Assets/Images/pet-clinic-chrome-inspect.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-chrome-inspect.png" />
+</p>
 
 From the resulting window that opens click the Network tab and ensure that the Recording button is depressed:
 
-![pet-clinic-developer](/Java/Assets/Images/pet-clinic-developer.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-developer.png" />
+</p>
 
 Click around the application. As you do, you should notice each new request recorded in the developer tools pane. When you are finished recording all the application operations you need, you can generate the HAR file by right-clicking any entry in the Name pane, choose Copy, then chose Copy all as HAR from the sub menu. This will save the contents of the recording as text into the clipboard.
 
-![pet-clinic-copy-har](/Java/Assets/Images/pet-clinic-copy-har.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-copy-har.png" />
+</p>
 
 You may have noticed another option: Save all as HAR with content. The reason we do not use this is is that ALL content (images, stylesheets, fonts, etc) will be saved to the file instead of just the HTTP requests.
 
@@ -109,4 +115,6 @@ Once you have your HAR file you can import into your choice of load testing tool
 * Pet Clinic official [Github repository](https://github.com/spring-projects/spring-petclinic)
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
 
-**You have completed MOD02. You may now proceed to MOD03**
+<p align="center">
+  <b>You have completed MOD02. You may now proceed to MOD03.</b>
+</p>
