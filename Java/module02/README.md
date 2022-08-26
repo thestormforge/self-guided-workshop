@@ -4,7 +4,9 @@
 
 Throughout this workshop we will be examining the Pet Clinic application. Pet Clinic is a reference Spring Boot application that uses the traditional MVC architecture that was common across enterprises before the advent of microservices. This monolithic application is a great example of how a “legacy” Java application can not only be successfully containerized and migrated to Kubernetes, but also, as we’ll see throughout the course of this workshop, optimized to run well without requiring a re-write.
 
-![pet-clinic-overview](/Java/Assets/Images/pet-clinic-overview.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-overview.png" />
+</p>
 
 Pet Clinic tracks a list of pet owners, their various pets, and the associated pet visits to the clinic for various veterinarian services with standard RESTful CRUD (Create, Read, Update, and Delete) operations.
 
@@ -64,19 +66,27 @@ Using the External IP we discovered above, let’s access Pet Clinic in a web br
 
 Let’s find some pet owners from the home page:
 
-![pet-clinic-find-owners](/Java/Assets/Images/pet-clinic-find-owners.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-find-owners.png" />
+</p>
 
 Leave the Last name field empty and click Find Owner:
 
-![pet-clinic-last-name-field](/Java/Assets/Images/pet-clinic-last-name-field.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-last-name-field.png" />
+</p>
 
 From the results page, click on Betty Davis
 
-![pet-clinic-betty](/Java/Assets/Images/pet-clinic-betty.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-betty.png" />
+</p>
 
 We can see that Betty has a single pet hamster named Basil but has not yet visited the clinic
 
-![pet-clinic-betty-detail](/Java/Assets/Images/pet-clinic-betty-detail.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-betty-detail.png" />
+</p>
 
 Feel free to click around to explore Pet Clinic more if needed.
 
