@@ -71,5 +71,5 @@ Also, notice that for each measured startup time, there seems to be a range “p
 
 
 <p align="center">
-  <b>You have completed MOD05. You may now proceed to MOD06.</b>
+  <b>You have completed MOD05. You may now proceed to <a href="/Java/module06/README.md">MOD06</a>.</b>
 </p>
