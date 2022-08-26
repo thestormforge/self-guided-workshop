@@ -21,5 +21,5 @@ Please let us know how we did! Complete the workshop survey that will be emailed
 <br>
 
 <p align="center">
-**You have completed MOD06!**
+  <b>You have completed MOD06!</b>
 </p>
