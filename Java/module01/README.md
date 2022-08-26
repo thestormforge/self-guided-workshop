@@ -124,5 +124,5 @@ You can now check to see that the pod has started and is `Running`
     optimize-controller-manager-576fc5fd59-jcshg   1/1     Running   0          4m6s
 
 <p align="center">
-  <b>You have completed MOD01. You may now proceed to MOD02.</b>
+  <b>You have completed MOD01. You may now proceed to <a href="/Java/module02/README.md">MOD02</a>.</b>
 </p>
