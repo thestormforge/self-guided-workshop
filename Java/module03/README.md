@@ -265,5 +265,5 @@ Finally, description and/or logs from the specific trial job pod (note that the 
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
 
 <p align="center">
-  <b>You have completed MOD03. You may now proceed to MOD04.</b>
+  <b>You have completed MOD03. You may now proceed to <a href="/Java/module04/README.md">MOD04</a>.</b>
 </p>
