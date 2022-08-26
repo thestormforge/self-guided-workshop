@@ -226,5 +226,6 @@ doi: 10.1111/j.0956-7976.2005.00782.x
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
 
 
-
-**You have completed MOD04. You may now proceed to MOD05**
+<p align="center">
+  <b>You have completed MOD04. You may now proceed to MOD05.</b>
+</p>
