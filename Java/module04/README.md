@@ -255,5 +255,5 @@ doi: 10.1111/j.0956-7976.2005.00782.x
 
 
 <p align="center">
-  <b>You have completed MOD04. You may now proceed to MOD05.</b>
+  <b>You have completed MOD04. You may now proceed to <a href="/Java/module05/README.md">MOD05</a>.</b>
 </p>
