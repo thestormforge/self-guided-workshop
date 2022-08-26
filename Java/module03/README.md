@@ -1,4 +1,4 @@
-# MOD03 - Pet Clinic Startup Experiment
+# MOD03 - Optimizing Pet Clinic Startup
 
 ## Overview
 
