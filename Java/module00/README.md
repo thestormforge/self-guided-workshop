@@ -5,7 +5,9 @@ Managing application parameters for Kubernetes deployments is difficult at best 
 
 Beyond setting basic Kubernetes native deployment parameters like `requests` and `limits`, there are a whole host of *application-specific* environment variables that directly impact both application performance and the total cost to run the application.
 
-![Kubernetes Parameters Can Be Complicated!](/Java/Assets/Images/k8s-param-gauges.png)
+<p align="center">
+  <img src="/Java/Assets/Images/k8s-param-gauges.png" />
+</p>
 
 <sub>Figure 1: Application parameters can include resource `requests` and `limits` as well as other variables like `HEAP_SIZE`, `PARALLEL_GC_THREADS`, and many more. </sub>
 
@@ -17,18 +19,24 @@ In the end, exhaustive tuning of these applications may not seem worth the effor
 
 ## The Role of Machine Learning
 
-![multi-regression](/Java/Assets/Images/multi-regression.png)
+<p align="center">
+  <img src="/Java/Assets/Images/multi-regression.png" />
+</p>
 
 Machine learning has become a powerful tool for analyzing large datasets to discover patterns and insights for easier human consumption. Today, these ML-based insights serve to ease decision making for everything from setting your home thermostat to driving your car safely.
 
-![generic-experiment-results](/Java/Assets/Images/generic-experiment-results.png)
+<p align="center">
+  <img src="/Java/Assets/Images/generic-experiment-results.png" />
+</p>
 
 When properly applied to resource management in Kubernetes, machine learning will prove essential to ensuring the myriad of deployment parameters are properly set to achieve optimal goals like performance and resource efficiency at scale.
 
 ## What is *StormForge Optimize Pro*?
 *StormForge Optimize Pro* is a ML-powered tool for experimenting with application configurations in Kubernetes. With the StormForge Optimize Pro Controller installed in your cluster, you can run experiments that rapidly iterate application parameter values and measure their outcome via one or more metrics.
 
-![trial-flow-controller](/Java/Assets/Images/trial-flow-controller-updated.png)
+<p align="center">
+  <img src="/Java/Assets/Images/trial-flow-controller-updated.png" />
+</p>
 
 By continuously testing application configurations in a rapid experimentation loop powered by machine learning, *StormForge Optimize Pro* is able to hone in on the optimal configurations that meet or exceed your goals, reducing overall time and human effort by thousands of hours per year.
 
@@ -37,8 +45,6 @@ By continuously testing application configurations in a rapid experimentation lo
 * Visit the [StormForge YouTube Channel](https://www.youtube.com/channel/UCW05S9esT9PKb9tkLrnbUoA)
 
 
-
-
-
-
-
+<p align="center">
+  <b>You have completed MOD00. You may now proceed to MOD01.</b>
+</p>
