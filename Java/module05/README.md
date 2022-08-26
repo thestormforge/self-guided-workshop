@@ -58,5 +58,6 @@ Also, notice that for each measured startup time, there seems to be a range “p
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
 
 
-
-You have completed MOD05. You may now proceed to MOD06.
+<p align="center">
+  <b>You have completed MOD05. You may now proceed to MOD06.</b>
+</p>
