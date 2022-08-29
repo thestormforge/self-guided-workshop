@@ -7,6 +7,7 @@ In this module, we'll focus on installing the requisite CLI tools, cloning the w
 
 ### Prerequisites
 Verify that the following tools have been installed on the machine you intend to participate in the workshop with.
+
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 2. [stormforge CLI](https://docs.stormforge.io/optimize-pro/getting-started/install/#installing-the-stormforge-command-line-interface)
 3. [Git](https://github.com/git-guides/install-git)
@@ -16,6 +17,8 @@ Verify that the following tools have been installed on the machine you intend to
 ___
 
 #### Setting the KUBECONFIG environment variable (Optional)
+
+> **Note:** this step requires the `kubectl` CLI tool to be installed. See the *Prerequisites* section of this module for those instructions.
 
 For those attending a guided workshop, a kubeconfig file will be provided by the StormForge team.
 
@@ -41,7 +44,10 @@ ___
 
 
 #### Clone the Workshop Github Repository
-Once your prerequisite CLI tools have been installed on your machine, the first step will be to clone the workshop repo to a local directory.
+
+> **Note:** this step requires the `git` CLI tool to be installed. See the *Prerequisites* section of this module for those instructions.
+
+Once your prerequisite CLI tools have been installed on your machine, clone the workshop repo to a local directory.
 
     git clone https://github.com/thestormforge/examples.git
 
@@ -72,7 +78,7 @@ Your default web browser will open and you should see an "Email Verified" messag
 
 #### Deploy the *StormForge Optimize Pro* Controller
 
-If you have not installed the `stormforge` CLI, please follow the instructions listed in the *Prerequisites* section of this MOD.
+> **Note:** this step requires the `stormforge` and `kubectl` CLI tools to be installed. See the *Prerequisites* section of this module for those instructions.
 
 **Using the `stormforge` CLI, install the *StormForge Optimize Pro* controller in your cluster**
 
@@ -84,7 +90,7 @@ If you have not installed the `stormforge` CLI, please follow the instructions l
 
 **Output**
 
-        NAME                STATUS   AGE
+    NAME                STATUS   AGE
     default             Active   3d15h
     kube-node-lease     Active   3d15h
     kube-public         Active   3d15h
