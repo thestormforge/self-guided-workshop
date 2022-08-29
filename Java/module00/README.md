@@ -41,7 +41,7 @@ When properly applied to resource management in Kubernetes, machine learning wil
 By continuously testing application configurations in a rapid experimentation loop powered by machine learning, *StormForge Optimize Pro* is able to hone in on the optimal configurations that meet or exceed your goals, reducing overall time and human effort by thousands of hours per year.
 
 ## Additional Information
-* Learn more about *StormForge Optimize* at [https://www.stormforge.io](https://www.stormforge.io)
+* Learn more about *StormForge* products at [https://www.stormforge.io](https://www.stormforge.io)
 * Visit the [StormForge YouTube Channel](https://www.youtube.com/channel/UCW05S9esT9PKb9tkLrnbUoA)
 
 
