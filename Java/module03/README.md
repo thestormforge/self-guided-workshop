@@ -37,23 +37,26 @@ Ingress: `pet-clinic`<br>
 
 The Pet Clinic experiment details are outlined below for review. They are also already included in the example `experiment` YAML file referenced in the lab steps further below.
 
-**Input parameters (same setting for both requests and limits):**<br>
+**Input parameters (same setting for both requests and limits):**
+
 <sub>Resources</sub>
-* `cpu`<br>
-* `memory`<br>
 
-<sub>Java Environment Variables</sub><br>
-* `gc_newRatio`<br>
-* `gc_survivorRatio`<br>
-* `initialCodeCacheSize`<br>
-* `threadStackSize`<br>
+* `cpu`
+* `memory`
 
-**Output metrics:**<br>
-* `Startup Time` - measured as a scraped value from the Pet Clinic startup log file using `'Started PetClinicApplication in (\d+\.*\d*) seconds'` as a search regular expression. If the application didn’t print out a startup time in the logs, it could be calculated as *ContainersReady* status timestamp minus container’s *startedAt* timestamp. The reasoning behind using these data points is that we do not want to include any possible image fetching time and other scheduling delays when calculating app startup time.
-    * *ContainersReady* value: `kubectl -n ${NAMESPACE} get pod ${APP_POD} -o json | jq -r '.status.conditions[] | select(.status == "True" and .type == "ContainersReady") | .lastTransitionTime'`
-    * *startedAt* value: `kubectl -n ${NAMESPACE} get pod ${APP_POD} -o json | jq -r '.status.containerStatuses[0].state.running.startedAt'`
-* `Cost` - measured according to the following formula
-    * `( (cpu * 17) * (memory * 3) ) / 1000`
+<sub>Java Environment Variables</sub>
+
+* `gc_newRatio`
+* `gc_survivorRatio`
+* `initialCodeCacheSize`
+* `threadStackSize`
+
+**Output metrics:**
+
+* `Startup Time` - measured as a scraped value from the Pet Clinic startup log file
+* `Cost` - measured according to the formula $\frac{17cpu \times 3memory}{1000}$
+
+> **Note:** the metrics selected for this lab are intentionally simplified in their implementation so that participants can focus on learning and understanding experiment concepts. In a production experiment, it is common for a trial to involve an external metrics service, such as Prometheus, in evaluating application performance.
 
 **Application Patches section:**
 
