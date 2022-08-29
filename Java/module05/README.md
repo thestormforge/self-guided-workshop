@@ -14,7 +14,7 @@ In this module we will review the experiment results for our Pet Clinic startup 
 
 Login to [app.stormforge.io](https://app.stormforge.io)
 
-Visit [https://app.stormforge.io](https://app.stormforge.io) (you will be redirect to an authentication page) and login using the provided shared workshop login credentials:
+Visit [https://app.stormforge.io](https://app.stormforge.io) (you will be redirect to an authentication page) and login using the credentials you used to sign up in MOD01:
 
 <p align="center">
   <img src="/Java/Assets/Images/browser-address.png" />
@@ -47,7 +47,7 @@ Let’s examine the `pet-clinic-latency-gc` results first:
 Notice that a Pareto front exists for this experiment also (if it didn’t, that would indicate that there is no direct trade-off relationship between the two metrics we chose: Startup Time and Resource Cost):
 
 <p align="center">
-  <img src="/Java/Assets/Images/pet-clinic-walkthrough-4.png" />
+  <img src="/Java/Assets/Images/pet-clinic-walkthrough-4v2.png" />
 </p>
 
 Notice that our baseline configuration, from a startup time standpoint, also has plenty of room for improvement (as we also saw from the experiment results in Module 004). There are at least a few configurations that are both faster and cheaper than our baseline.
