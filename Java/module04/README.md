@@ -183,7 +183,7 @@ Close the drawer and click the recommended square dot shown in orange. Notice in
   <img src="/Java/Assets/Images/mod04-walkthrough-recommended-drawer-1.png" />
 </p>
 
-*StormForge Optimize Pro* will typically recommend a trial that exists on the Pareto front that represents a good balance between the two trade-off metrics displayed. Having said this, keep in mind that only you or someone from your application product team really understands which metric takes highest priority. The thing to keep in mind is that you know which direction to move on the Pareto front to choose the configuration setting that best fits your specific needs.
+*StormForge Optimize Pro* will typically recommend a trial that exists on the Pareto front that represents a good balance between the two trade-off metrics displayed. Having said this, only you or someone from your application product team really understands which metric takes highest priority. The thing to keep in mind is that you know which direction to move on the Pareto front to choose the configuration setting that best fits your specific needs.
 
 
 #### Secondary Insights: CPU-bound or Memory-bound?
