@@ -142,7 +142,7 @@ If the trial job or trial setup tasks require specific RBAC permissions, appropr
 ## Hands-on
 ### Clone examples repo
 
-If you have't completed this step from **MOD01**, change directory to a good working directory and then run<br>
+If you have't completed this step from **MOD01**, change directory to a good working directory and then run
 
     git clone https://github.com/thestormforge/examples.git
 
