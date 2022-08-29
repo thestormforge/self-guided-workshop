@@ -16,27 +16,39 @@ Login to [app.stormforge.io](https://app.stormforge.io)
 
 Visit [https://app.stormforge.io](https://app.stormforge.io) (you will be redirect to an authentication page) and login using the provided shared workshop login credentials:
 
-![browser-address](/Java/Assets/Images/browser-address.png)<br>
-![browser-login](/Java/Assets/Images/browser-login.png)
+<p align="center">
+  <img src="/Java/Assets/Images/browser-address.png" />
+</p>
+<p align="center">
+  <img src="/Java/Assets/Images/browser-login.png" />
+</p>
 
 Explore `pet-clinic-startup` experiment
 
 From the main page, choose the `pet-clinic` application…
  
-![pet-clinic-walkthrough-1](/Java/Assets/Images/pet-clinic-walkthrough-1.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-walkthrough-1.png" />
+</p>
 
 …and then the pet-clinic-startup-time scenario:
 
-![pet-clinic-walkthrough-2](/Java/Assets/Images/pet-clinic-walkthrough-2.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-walkthrough-2.png" />
+</p>
 
 Let’s examine the `pet-clinic-latency-gc` results first:
 
-![pet-clinic-walkthrough-3](/Java/Assets/Images/pet-clinic-walkthrough-3.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-walkthrough-3.png" />
+</p>
 
 
 Notice that a Pareto front exists for this experiment also (if it didn’t, that would indicate that there is no direct trade-off relationship between the two metrics we chose: Startup Time and Resource Cost):
 
-![pet-clinic-walkthrough-4](/Java/Assets/Images/pet-clinic-walkthrough-4.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-walkthrough-4.png" />
+</p>
 
 Notice that our baseline configuration, from a startup time standpoint, also has plenty of room for improvement (as we also saw from the experiment results in Module 004). There are at least a few configurations that are both faster and cheaper than our baseline.
 
@@ -58,5 +70,6 @@ Also, notice that for each measured startup time, there seems to be a range “p
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
 
 
-
-You have completed MOD05. You may now proceed to MOD06.
+<p align="center">
+  <b>You have completed MOD05. You may now proceed to <a href="/Java/module06/README.md">MOD06</a>.</b>
+</p>

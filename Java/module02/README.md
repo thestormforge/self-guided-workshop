@@ -4,7 +4,9 @@
 
 Throughout this workshop we will be examining the Pet Clinic application. Pet Clinic is a reference Spring Boot application that uses the traditional MVC architecture that was common across enterprises before the advent of microservices. This monolithic application is a great example of how a “legacy” Java application can not only be successfully containerized and migrated to Kubernetes, but also, as we’ll see throughout the course of this workshop, optimized to run well without requiring a re-write.
 
-![pet-clinic-overview](/Java/Assets/Images/pet-clinic-overview.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-overview.png" />
+</p>
 
 Pet Clinic tracks a list of pet owners, their various pets, and the associated pet visits to the clinic for various veterinarian services with standard RESTful CRUD (Create, Read, Update, and Delete) operations.
 
@@ -64,19 +66,27 @@ Using the External IP we discovered above, let’s access Pet Clinic in a web br
 
 Let’s find some pet owners from the home page:
 
-![pet-clinic-find-owners](/Java/Assets/Images/pet-clinic-find-owners.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-find-owners.png" />
+</p>
 
 Leave the Last name field empty and click Find Owner:
 
-![pet-clinic-last-name-field](/Java/Assets/Images/pet-clinic-last-name-field.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-last-name-field.png" />
+</p>
 
 From the results page, click on Betty Davis
 
-![pet-clinic-betty](/Java/Assets/Images/pet-clinic-betty.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-betty.png" />
+</p>
 
 We can see that Betty has a single pet hamster named Basil but has not yet visited the clinic
 
-![pet-clinic-betty-detail](/Java/Assets/Images/pet-clinic-betty-detail.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-betty-detail.png" />
+</p>
 
 Feel free to click around to explore Pet Clinic more if needed.
 
@@ -86,15 +96,21 @@ In **module 3** we’ll learn a bit more about what comprises an experiment. One
 
 For Chrome, developer tools can be opened from any page by right-clicking anywhere on the page and choosing Inspect from the context menu:
 
-![pet-clinic-chrome-inspect](/Java/Assets/Images/pet-clinic-chrome-inspect.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-chrome-inspect.png" />
+</p>
 
 From the resulting window that opens click the Network tab and ensure that the Recording button is depressed:
 
-![pet-clinic-developer](/Java/Assets/Images/pet-clinic-developer.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-developer.png" />
+</p>
 
 Click around the application. As you do, you should notice each new request recorded in the developer tools pane. When you are finished recording all the application operations you need, you can generate the HAR file by right-clicking any entry in the Name pane, choose Copy, then chose Copy all as HAR from the sub menu. This will save the contents of the recording as text into the clipboard.
 
-![pet-clinic-copy-har](/Java/Assets/Images/pet-clinic-copy-har.png)
+<p align="center">
+  <img src="/Java/Assets/Images/pet-clinic-copy-har.png" />
+</p>
 
 You may have noticed another option: Save all as HAR with content. The reason we do not use this is is that ALL content (images, stylesheets, fonts, etc) will be saved to the file instead of just the HTTP requests.
 
@@ -109,4 +125,6 @@ Once you have your HAR file you can import into your choice of load testing tool
 * Pet Clinic official [Github repository](https://github.com/spring-projects/spring-petclinic)
 * Oracle Java 8 [CLI Documentation](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html#BGBCIEFC)
 
-**You have completed MOD02. You may now proceed to MOD03**
+<p align="center">
+  <b>You have completed MOD02. You may now proceed to <a href="/Java/module03/README.md">MOD03</a>.</b>
+</p>
