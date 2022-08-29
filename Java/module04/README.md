@@ -173,10 +173,8 @@ This baseline trial is usually the first trial to run, is configured to run the 
 If you click the baseline square, you can see, in the details drawer on the right, the full details of this selected baseline trial including the current input parameter values used for the trial, the range of values for the input parameters that is configured for ML to explore, and finally the resulting metrics measurements.  As you click other trial data points, you can scroll back down here to see how those particular trial details compare against the baseline and recommended results.
 
 <p align="center">
-  <img src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-1.png" />
-</p>
-<p align="center">
-  <img src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-2.png" />
+  <img style="padding:20px;" src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-1.png" />
+  <img style="padding:20px;" src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-2.png" />
 </p>
 
 Close the drawer and click the recommended square dot shown in orange. Notice in the drawer the input values and resulting output metric values in comparison to the baseline values.
