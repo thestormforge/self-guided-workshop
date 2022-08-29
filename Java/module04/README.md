@@ -173,16 +173,16 @@ This baseline trial is usually the first trial to run, is configured to run the 
 If you click the baseline square, you can see, in the details drawer on the right, the full details of this selected baseline trial including the current input parameter values used for the trial, the range of values for the input parameters that is configured for ML to explore, and finally the resulting metrics measurements.  As you click other trial data points, you can scroll back down here to see how those particular trial details compare against the baseline and recommended results.
 
 <p align="center">
-  <img src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-1" />
+  <img src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-1.png" />
 </p>
 <p align="center">
-  <img src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-2" />
+  <img src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-2.png" />
 </p>
 
 Close the drawer and click the recommended square dot shown in orange. Notice in the drawer the input values and resulting output metric values in comparison to the baseline values.
 
 <p align="center">
-  <img src="/Java/Assets/Images/mod04-walkthrough-recommended-drawer-1" />
+  <img src="/Java/Assets/Images/mod04-walkthrough-recommended-drawer-1.png" />
 </p>
 
 *StormForge Optimize Pro* will typically recommend a trial that exists on the Pareto front that represents a good balance between the two trade-off metrics displayed. Having said this, keep in mind that only you or someone from your application product team really understands which metric takes highest priority. The thing to keep in mind is that you know which direction to move on the Pareto front to choose the configuration setting that best fits your specific needs.
