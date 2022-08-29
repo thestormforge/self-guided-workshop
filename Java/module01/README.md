@@ -19,25 +19,16 @@ ___
 
 For those attending a guided workshop, a kubeconfig file will be provided by the StormForge team.
 
-While there are many methods for adding and managing contexts in an existing kubeconfig, you may choose to save your existing $KUBECONFIG environment variable settings and temporarily use the kubeconfig file provided by the StormForge team.
+While there are many methods for adding and managing contexts in an existing kubeconfig, the simplest approach is to temporarily use the kubeconfig file provided by the StormForge team by setting the KUBECONFIG environment variable.
 
-For more comprehensive information covering how to manage access to multiple Kubernetes clusters, please visit the documentation [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#set-the-kubeconfig-environment-variable).
-
-##### **Step 1** Export your current KUBECONFIG settings
+##### **Step 1** Set your KUBECONFIG environment variable
 
 ###### Mac/Linux<br>
-    export KUBECONFIG_SAVED="$KUBECONFIG"
-###### Windows PowerShell<br>
-    $Env:KUBECONFIG_SAVED=$ENV:KUBECONFIG
-
-##### **Step 2** Modify your KUBECONFIG environment variable
-
-###### Mac/Linux<br>
-    export KUBECONFIG="${KUBECONFIG}:<path to kubeconfig>"
+    export KUBECONFIG="<path to kubeconfig>"
 ###### Windows PowerShell<br>
     $Env:KUBECONFIG=("<path to kubeconfig>")
 
-#### **Step 3** Verify that you can access your workshop cluster
+##### **Step 2** Verify that you can access your workshop cluster
 
     kubectl get svc -n default
 
@@ -45,16 +36,6 @@ For more comprehensive information covering how to manage access to multiple Kub
 
     NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
     kubernetes   ClusterIP   10.0.0.1     <none>        443/TCP   3d15h
-
-##### **Step 4** Returning your KUBECONFIG values to normal
-**<table><tr><td>Please note: This step should only be completed at the conclusion of the lab</td></tr></table>**
-To return your KUBECONFIG values to their previously saved state:
-
-###### Mac/Linux<br>
-    export KUBECONFIG="$KUBECONFIG_SAVED"
-
-###### Windows PowerShell<br>
-    $Env:KUBECONFIG=$ENV:KUBECONFIG_SAVED
 
 ___ 
 
