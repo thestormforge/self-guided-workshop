@@ -26,7 +26,7 @@ In the end, exhaustive tuning of these applications may not seem worth the effor
 Machine learning has become a powerful tool for analyzing large datasets to discover patterns and insights for easier human consumption. Today, these ML-based insights serve to ease decision making for everything from setting your home thermostat to driving your car safely.
 
 <p align="center">
-  <img src="/Java/Assets/Images/generic-experiment-results.png" />
+  <img src="/Java/Assets/Images/generic-experiment-results-2.png" />
 </p>
 
 When properly applied to resource management in Kubernetes, machine learning will prove essential to ensuring the myriad of deployment parameters are properly set to achieve optimal goals like performance and resource efficiency at scale.
