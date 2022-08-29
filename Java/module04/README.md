@@ -9,7 +9,7 @@ This experiment was driven by a *StormForge Performance Testing* test case trial
 It is important to keep in mind that when crafting an experiment, as with any type of scientific experiment, there is usually a question in mind for which you currently do not yet have enough data to answer. The goal of the experiment is then to gather enough data as accurately and quickly as possible to develop your answer. The key is conducting the experiment in a systematic manner so that accurate conclusions can be drawn from the different combinations of input variables to the experiment. The catch is that, once the number of input variables exceeds four, human beings have great difficulty reasoning about the experiment at hand. The experiment that we will be reviewing in this module has six input parameters with some parameter value possibilities ranging from 5 to 4500. This makes for a total input variable combination of over 585 trillion possibilities. This would be impossible to explore without some sort of ML assistance!
 
 
-Lastly, as we’ll see after examining this experiment, the data can often reveal more insights than anticipated. This is attributed to the fact that, once you have a few ways to quickly compare your data points, new knowledge can be quickly gained. 
+Lastly, as we’ll see after examining this experiment, the data can often reveal more insights than anticipated. This is attributed to the fact that, once you have a few ways to quickly compare your data points, new knowledge can be quickly gained.
 
 Let’s explore this in the next section!
 ## Lab
@@ -35,7 +35,7 @@ Number of trials: `150`
 **Input parameters:**
 * `cpu` - same setting for both requests and limits
 * `memory` - same setting for both requests and limits
-* `gc_newRatio` - ratio between young and old generation heap space for objects. 
+* `gc_newRatio` - ratio between young and old generation heap space for objects.
 * `gc_survivorRatio` - ratio between new and survivor heap space for objects in memory
 * `threadStackSize` - setting for how much memory to allocate each thread’s stack.
 * `initialCodeCacheSize` - initial amount of memory used by the JIT to cache compiled code. The JIT will determine if and when it makes sense to compile Java byte code down to native machine code for speeding up execution.
@@ -74,7 +74,7 @@ As with the experiment module 3, we only patched the Deployment object for Pet C
 
 **Trial section:**
 
-Notice in this trial section that a different image was used to serve as the trial job pod. This time a custom-built *StormForm Performance Testing* image was used to manage authentication and test case calling from the *StormForge Performance Testing* cloud service.
+Notice in this trial section that a different image was used to serve as the trial job pod. This time a custom-built *StormForge Performance Testing* image was used to manage authentication and test case calling from the *StormForge Performance Testing* cloud service.
 
     trialTemplate:
         metadata:
@@ -131,22 +131,12 @@ Notice in this trial section that a different image was used to serve as the tri
 
 This experiment required specific RBAC setup during the experiment along with a `Secret` resource used for authentication.
 
-## Hands-on
-#### Login to app.stormforge.io
-
-Visit https://app.stormforge.io (you will be redirect to an authentication page) and login using the provided shared workshop login credentials:
-
-<p align="center">
-  <img src="/Java/Assets/Images/browser-address.png" />
-</p>
-
-<p align="center">
-  <img src="/Java/Assets/Images/browser-login.png" />
-</p>
-
+## Guided Demo
 #### Explore `pet-clinic-latency-gc-jit` experiment
+The workshop host will login to a demo environment and walk through the example experiment results. You may also
+follow along with screenshots below.
 
-From the main page, choose the `pet-clinic` application…
+From the main page, we choose the `pet-clinic` application…
 
 <p align="center">
   <img src="/Java/Assets/Images/mod04-walkthrough-1.png" />
@@ -172,24 +162,27 @@ Notice the apparent trendline of peach and orange colored dots in the scatter pl
 
 By using ML to drive experimentation and establish correlations between various combinations of input parameter values and associated measured output metric values, *StormForge Optimize Pro* facilitates the fast discovery of this Pareto front enabling us to see a clear visual pattern for what the data is telling us. In this case, we can see that though the app team may have done some initial optimization to establish the current baseline configuration, it looks like there are better performing, and cheaper options (we can have our cake and eat it too in this case)!
 
-Click the baseline square dot shown in blue. A large tooltip appears providing quick details of the baseline experiment trial:
+Hover over the baseline square dot shown in blue. A large tooltip appears providing quick details of the baseline experiment trial:
 
 <p align="center">
   <img src="/Java/Assets/Images/mod04-walkthrough-5.png" />
 </p>
 
-This baseline trial is usually the first trial to run, is configured to run the application as it currently exists, and serves as the basis for comparison between any other trial. 
+This baseline trial is usually the first trial to run, is configured to run the application as it currently exists, and serves as the basis for comparison between any other trial.
 
-If you scroll down toward the bottom page, you can see the full details of this selected baseline trial including the current input parameter values used for the trial, the range of values for the input parameters that is configured for ML to explore, and finally the resulting metrics measurements.  As you click other trial data points, you can scroll back down here to see how those particular trial details compare against the baseline and recommended results.
+If you click the baseline square, you can see, in the details drawer on the right, the full details of this selected baseline trial including the current input parameter values used for the trial, the range of values for the input parameters that is configured for ML to explore, and finally the resulting metrics measurements.  As you click other trial data points, you can scroll back down here to see how those particular trial details compare against the baseline and recommended results.
 
 <p align="center">
-  <img src="/Java/Assets/Images/mod04-walkthrough-6.png" />
+  <img src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-1" />
+</p>
+<p align="center">
+  <img src="/Java/Assets/Images/mod04-walkthrough-baseline-drawer-2" />
 </p>
 
-Scroll back up to the graph and click the recommended square dot shown in orange and scroll down toward the bottom of the page. Notice the input values and resulting output metric values in comparison to the baseline values.
+Close the drawer and click the recommended square dot shown in orange. Notice in the drawer the input values and resulting output metric values in comparison to the baseline values.
 
 <p align="center">
-  <img src="/Java/Assets/Images/mod04-walkthrough-7.png" />
+  <img src="/Java/Assets/Images/mod04-walkthrough-recommended-drawer-1" />
 </p>
 
 *StormForge Optimize Pro* will typically recommend a trial that exists on the Pareto front that represents a good balance between the two trade-off metrics displayed. Having said this, keep in mind that only you or someone from your application product team really understands which metric takes highest priority. The thing to keep in mind is that you know which direction to move on the Pareto front to choose the configuration setting that best fits your specific needs.
@@ -199,7 +192,7 @@ Scroll back up to the graph and click the recommended square dot shown in orange
 
 As mentioned in this module’s overview section, once we have data in hand we can often make secondary discoveries. Let’s see if we have enough information to determine if this application is a CPU bound or Memory bound application.
 
-Scroll back up to the main graph at the top of the page. To the right of the graph there are three dropdown boxes. The first box labeled *Filter By* allows us to choose which trials we would like to have plotted on the graph. The next two allow us to choose which data we would like to have plotted on the *X-Axis* and *Y-Axis* respectively. Click the *X-Axis* dropdown and choose *Memory* from the list:
+Close the details drawer if it is currently open. Just above the graph there are three dropdown boxes. The first box labeled *Filter By* allows us to choose which trials we would like to have plotted on the graph. The next two allow us to choose which data we would like to have plotted on the *X-Axis* and *Y-Axis* respectively. Click the *X-Axis* dropdown and choose *Memory* from the list:
 
 <p align="center">
   <img src="/Java/Assets/Images/mod04-walkthrough-8.png" />
@@ -240,7 +233,7 @@ Next choose *Initial Code Cache Size* from the *X-Axis* dropdown.
   <img src="/Java/Assets/Images/mod04-walkthrough-12.png" />
 </p>
 
-For this setting, ML favored values between 900k and 1500k (most heavily favored). This is a drastic difference from the default JVM value of 500. As a result, we can conclude that this setting has a moderately strong impact on the overall results. 
+For this setting, ML favored values between 900k and 1500k (most heavily favored). This is a drastic difference from the default JVM value of 500. As a result, we can conclude that this setting has a moderately strong impact on the overall results.
 
 Feel free to click around and see if you can draw your own conclusions from the different data plots. This concludes our review of this experiment.
 
