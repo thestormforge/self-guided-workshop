@@ -19,5 +19,5 @@ Verify that the following tools have been installed on the machine you intend to
 * [Module02 - Exploring the Pet Clinic App](/Java/module02/README.md) *(~30 min)*
 * [Module03 - Optimizing Pet Clinic Startup](/Java/module03/README.md) *(~60 min)*
 * [Module04 - P95 Latency Java Experiment](/Java/module04/README.md) *(~60 min)*
-* [Module05 - Pet Clinic Startup Results](README.md) *(~30 min)*
-* [Module06 - Summary and Wrap up](README.md) *(~15 min)*
+* [Module05 - Pet Clinic Startup Results](/Java/module05/README.md) *(~30 min)*
+* [Module06 - Summary and Wrap up](/Java/module06/README.md) *(~15 min)*
