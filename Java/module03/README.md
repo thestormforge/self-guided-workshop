@@ -60,78 +60,78 @@ The Pet Clinic experiment details are outlined below for review. They are also a
 
 **Application Patches section:**
 
-We are only patching the Deployment object for Pet Clinic. In it we are setting the `cpu` and `memory` values for both requests and limits to the same input parameter values respectively. In addition we are ensuring that the `+PreferContainerQuotaForCPUCount` JVM option is enabled at runtime by passing it along as the value of the `JAVA_TOOL_OPTIONS` environment variable. When the JVM sees this environment variable on startup, it automatically applies the setting.
+For each trial, we are patching the Deployment object for Pet Clinic. In the deployment we are setting the `cpu` and `memory` values for both requests and limits to the same input parameter values, respectively. In addition we are ensuring that the `+PreferContainerQuotaForCPUCount` JVM option is enabled at runtime by passing it along as the value of the `JAVA_TOOL_OPTIONS` environment variable. When the JVM sees this environment variable on startup, it automatically applies the setting.
 
     patches:
-      - targetRef:
-      kind: Deployment
-      apiVersion: apps/v1
-      name: pet-clinic
-      namespace: pet-clinic
-    patch: |
-      spec:
-        template:
-          spec:
-            containers:
-            - name: spring-petclinic
-              resources:
-                limits:
-                  cpu: '{{ index .Values.cpu}}m'
-                  memory: '{{ index .Values.memory}}Mi'
-                requests:
-                  cpu: '{{ index .Values.cpu}}m'
-                  memory: '{{ index .Values.memory}}Mi'
-              env:
-              - name: JAVA_TOOL_OPTIONS
-                value: '-XX:+PreferContainerQuotaForCPUCount'
+    - targetRef:
+        name: pet-clinic
+        kind: Deployment
+        apiVersion: apps/v1
+        namespace: pet-clinic
+      patch: |
+        spec:
+          template:
+            spec:
+              containers:
+              - name: spring-petclinic
+                resources:
+                  limits:
+                    cpu: '{{ index .Values.cpu}}m'
+                    memory: '{{ index .Values.memory}}Mi'
+                  requests:
+                    cpu: '{{ index .Values.cpu}}m'
+                    memory: '{{ index .Values.memory}}Mi'
+                env:
+                - name: JAVA_TOOL_OPTIONS
+                  value: '-XX:+PreferContainerQuotaForCPUCount'
 
 **Trial section:**
 
     trialTemplate:
-    metadata:
-      labels:
-        stormforge.io/application: 'pet-clinic'
-        stormforge.io/objective: 'cost-vs-startup-time'
-        stormforge.io/scenario: 'pet-clinic-startup-time'
-    spec:
-      readinessGates:
-      - selector:
-          matchLabels:
-            stormforge.io/application: 'pet-clinic'
-            stormforge.io/scenario: 'pet-clinic-startup-time'
-        failureThreshold: 60
-        conditionTypes:
-        - ContainersReady
-      jobTemplate:
-        metadata:
-          labels:
-            stormforge.io/application: 'pet-clinic'
-            stormforge.io/objective: 'cost-vs-startup-time'
-            stormforge.io/scenario: 'pet-clinic-startup-time'
-        spec:
-          template:
-            metadata:
-              labels:
-                stormforge.io/application: 'pet-clinic'
-                stormforge.io/objective: 'cost-vs-startup-time'
-                stormforge.io/scenario: 'pet-clinic-startup-time'
-            spec:
-              containers:
-              - name: startup-checker
-                image: public.ecr.aws/stormforge/examples/startup-checker:latest
-                imagePullPolicy: Always
-                env:
-                - name: NAMESPACE
-                  value: pet-clinic
-                - name: APP_NAME
-                  value: pet-clinic
-              serviceAccountName: optimize-setup-sa
-      setupServiceAccountName: optimize-setup-sa
-      setupTasks:
-      - name: monitoring
-        args:
-        - prometheus
-        - $(MODE)
+      metadata:
+        labels:
+          stormforge.io/application: 'pet-clinic'
+          stormforge.io/objective: 'cost-vs-startup-time'
+          stormforge.io/scenario: 'pet-clinic-startup-time'
+      spec:
+        readinessGates:
+        - selector:
+            matchLabels:
+              stormforge.io/application: 'pet-clinic'
+              stormforge.io/scenario: 'pet-clinic-startup-time'
+          failureThreshold: 60
+          conditionTypes:
+          - ContainersReady
+        jobTemplate:
+          metadata:
+            labels:
+              stormforge.io/application: 'pet-clinic'
+              stormforge.io/objective: 'cost-vs-startup-time'
+              stormforge.io/scenario: 'pet-clinic-startup-time'
+          spec:
+            template:
+              metadata:
+                labels:
+                  stormforge.io/application: 'pet-clinic'
+                  stormforge.io/objective: 'cost-vs-startup-time'
+                  stormforge.io/scenario: 'pet-clinic-startup-time'
+              spec:
+                containers:
+                - name: startup-checker
+                  image: public.ecr.aws/stormforge/examples/startup-checker:latest
+                  imagePullPolicy: Always
+                  env:
+                  - name: NAMESPACE
+                    value: pet-clinic
+                  - name: APP_NAME
+                    value: pet-clinic
+                serviceAccountName: optimize-setup-sa
+        setupServiceAccountName: optimize-setup-sa
+        setupTasks:
+        - name: monitoring
+          args:
+          - prometheus
+          - $(MODE)
 
 **Additional Info:**
 
