@@ -258,7 +258,7 @@ Finally, description and/or logs from the specific trial job pod (note that the 
 
     kubectl -n pet-clinic describe pod pet-clinic-startup-001-hllrd
 
-    kubectl -n pet-clinic logs pod pet-clinic-startup-001-hllrd
+    kubectl -n pet-clinic logs pet-clinic-startup-001-hllrd
 
 
 ## Additional information
