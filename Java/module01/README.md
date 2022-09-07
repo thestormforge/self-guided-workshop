@@ -76,6 +76,12 @@ Your default web browser will open and you should see an "Email Verified" messag
 
 ![confirmation web](/Java/Assets/Images/confirmation-web.png)
 
+#### Confirm current cluster authentication
+
+Authenticate with the StormForge cloud services using the stormforge CLI tool using the command below. Note that using the --force flag will simply force a re-login if you were already logged in.
+
+    stormforge login --force
+
 #### Deploy the *StormForge Optimize Pro* Controller
 
 > **Note:** this step requires the `stormforge` and `kubectl` CLI tools to be installed. See the *Prerequisites* section of this module for those instructions.
