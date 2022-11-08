@@ -157,7 +157,7 @@ Using your favorite text editor, open up `examples/java/pet-clinic/experiments/e
 
 If you have not done so already, authenticate with the StormForge cloud services using the stormforge CLI tool using the command below. Note that using the --force flag will simply force a re-login if you were already logged in.
 
-    stormforge login --force
+    stormforge login --force --url
 
 Opening your default browser to visit:
 
