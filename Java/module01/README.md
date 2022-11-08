@@ -20,9 +20,8 @@ ___
 
 > **Note:** this step requires the `kubectl` CLI tool to be installed. See the *Prerequisites* section of this module for those instructions.
 
-For those attending a guided workshop, a kubeconfig file will be provided by the StormForge team.
+For those attending a guided workshop, you may skip these steps and go directly to [StormForge Workshop Console](http://workshop.stormforge.show/console).
 
-While there are many methods for adding and managing contexts in an existing kubeconfig, the simplest approach is to temporarily use the kubeconfig file provided by the StormForge team by setting the KUBECONFIG environment variable.
 
 ##### **Step 1** Set your KUBECONFIG environment variable
 
@@ -78,9 +77,9 @@ Your default web browser will open and you should see an "Email Verified" messag
 
 #### Confirm current cluster authentication
 
-Authenticate with the StormForge cloud services using the stormforge CLI tool using the command below. Note that using the --force flag will simply force a re-login if you were already logged in.
+Authenticate with the StormForge cloud services using the stormforge CLI tool using the command below. Note that using the --force flag will simply force a re-login if you were already logged in.  You'll then want to paste the URL provided into your browser, and come back to the console to also get your login code:
 
-    stormforge login --force
+    stormforge login --force --url
 
 #### Deploy the *StormForge Optimize Pro* Controller
 
